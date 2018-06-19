@@ -1,0 +1,25 @@
+{
+  "name": "schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "watch": "watchify -v -p tsify src/*.ts -o app.js",
+      "build": "browserify ./src/app.ts -p tsify --outfile ./app.js",
+      "build-prod": "browserify ./src/app.ts -p tsify -g uglifyify --outfile ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jquery": "^3.3.1",
+    "@types/moment": "^2.13.0",
+    "browserify": "^16.2.2",
+    "jquery": "^3.3.1",
+    "moment": "^2.22.2",
+    "tsify": "^4.0.0",
+    "typescript": "^2.9.2",
+    "uglifyify": "^5.0.0",
+    "watchify": "^3.11.0"
+  }
+}
