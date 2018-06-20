@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
-import UiComponent from './UiComponent';
 import * as moment from 'moment';
+import UiComponent from './UiComponent';
 
 export default class Countdown implements UiComponent {
     constructor(private _datetime: string) {

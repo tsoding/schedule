@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
-import Root from './Root';
 import Event from './Event';
+import Root from './Root';
 
 new Event(
     "20-06-2018",

@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import * as moment from 'moment';
-import UiComponent from './UiComponent';
 import Countdown from './Countdown';
+import UiComponent from './UiComponent';
 
 export default class Event implements UiComponent {
     constructor(private _datetime: string,
