@@ -4,7 +4,7 @@ import Countdown from './Countdown';
 import UiComponent from './UiComponent';
 
 export default class Event implements UiComponent {
-    constructor(private _datetime: string,
+    constructor(private _datetime: moment.Moment,
                 private _title: string,
                 private _description: string) {
     }
@@ -13,7 +13,6 @@ export default class Event implements UiComponent {
         let node = $('<div>');
 
         node.append($(`<h1>${this._title}</h1>`))
-        node.append($(`<div>${this._datetime}</div>`))
         new Countdown(this._datetime).appendTo(node)
         node.append($(`<div>${this._description}</div>`))
 
