@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "watch": "watchify -v -p tsify src/*.ts -o app.js",
-      "build": "browserify ./src/app.ts -p tsify --outfile ./app.js",
-      "build-prod": "browserify ./src/app.ts -p tsify -g uglifyify --outfile ./app.js"
+    "watch": "watchify -v -p tsify src/app.ts -o ./app.js",
+    "build": "browserify ./src/app.ts -p tsify --outfile ./app.js",
+    "build-prod": "browserify ./src/app.ts -p tsify -g uglifyify --outfile ./app.js"
   },
   "keywords": [],
   "author": "",
