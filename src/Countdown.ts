@@ -7,7 +7,7 @@ export default class Countdown implements UiComponent {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        // TODO: Countdown.appendTo is not implemente
+        // TODO(#1): Countdown.appendTo is not implemented
         entry.append($('<div>[COUNTDOWN TBD]</div>'))
     }
 }
