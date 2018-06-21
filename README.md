@@ -5,9 +5,7 @@
 ## Quick Start
 
 ```console
-$ npm install
-$ npm run build
-$ <browser> index.html
-$ npm run build-prod       # for production build with minimization
-$ npm run watch            # for watch mode
+$ make
+$ <browser> dist/index.html
+$ make watch                  # for watch mode
 ```
