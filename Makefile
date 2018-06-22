@@ -2,9 +2,9 @@ TSS=$(wildcard ts/*.ts)
 BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
 
-all: dist/app.js dist/index.html
+all: dist/app.js dist/index.html dist/reset.css
 
-watch: dist/index.html $(TSS) $(WATCHIFY)
+watch: dist/index.html dist/reset.css $(TSS) $(WATCHIFY)
 	$(WATCHIFY) -v ./ts/app.ts -p tsify --outfile dist/app.js
 
 $(BROWSERIFY): package.json
@@ -18,6 +18,9 @@ dist/app.js: dist $(BROWSERIFY) $(TSS)
 
 dist/index.html: dist html/index.html
 	cp html/index.html dist/
+
+dist/reset.css: dist css/reset.css
+	cp css/reset.css dist/reset.css
 
 dist:
 	mkdir -p dist
