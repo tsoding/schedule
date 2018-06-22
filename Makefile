@@ -4,7 +4,7 @@ WATCHIFY=./node_modules/.bin/watchify
 
 all: dist/app.js dist/index.html
 
-watch: dist/index.html $(TSS)
+watch: dist/index.html $(TSS) $(WATCHIFY)
 	$(WATCHIFY) -v ./ts/app.ts -p tsify --outfile dist/app.js
 
 $(BROWSERIFY): package.json
