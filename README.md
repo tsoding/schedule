@@ -5,6 +5,7 @@
 ## Quick Start
 
 ```console
+$ npm install
 $ make
 $ <browser> dist/index.html
 $ make watch                  # for watch mode

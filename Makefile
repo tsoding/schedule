@@ -5,19 +5,10 @@ LESSC=./node_modules/.bin/lessc
 
 all: dist/app.js dist/index.html dist/reset.css dist/main.css
 
-watch: dist/index.html dist/reset.css dist/main.css $(TSS) $(WATCHIFY)
+watch: dist/index.html dist/reset.css dist/main.css $(TSS)
 	$(WATCHIFY) -v ./ts/app.ts -p tsify --outfile dist/app.js
 
-$(BROWSERIFY): package.json
-	npm install
-
-$(WATCHIFY): package.json
-	npm install
-
-$(LESSC): package.json
-	npm install
-
-dist/app.js: dist $(BROWSERIFY) $(TSS)
+dist/app.js: dist $(TSS)
 	$(BROWSERIFY) ./ts/app.ts -p tsify -g uglifyify --outfile dist/app.js
 
 dist/index.html: dist html/index.html
