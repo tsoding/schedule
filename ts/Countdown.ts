@@ -8,8 +8,8 @@ export default class Countdown implements UiComponent {
     }
 
     asHTMLElement(): JQuery<HTMLElement> {
-        return $(`<div title="${this._datetime.tz(moment.tz.guess()).format('llll')}">
-                      ${this._datetime.fromNow()}
+        return $(`<div class="countdown">
+                      ${this._datetime.tz(moment.tz.guess()).format('llll')} (${this._datetime.fromNow()})
                   </div>`)
     }
 }
