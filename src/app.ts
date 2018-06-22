@@ -7,15 +7,15 @@ import Root from './Root';
 $('#root')
     .append(
         new Event(
-            moment.tz("2018-06-22 18:00", "Asia/Novosibirsk").utc(),
-            "Tsoding Stream",
-            "Streaming some coding on https://twitch.tv/tsoding"
+            moment.tz("2018-06-23 23:00", "Asia/Novosibirsk").utc(),
+            "Nothing (Game in Pure C)",
+            "https://github.com/tsoding/nothing"
         ).asHTMLElement()
     )
     .append(
         new Event(
-            moment.tz("2018-06-23 18:00", "Asia/Novosibirsk").utc(),
-            "Tsoding Stream #2",
-            "Streaming some coding on https://twitch.tv/tsoding"
+            moment.tz("2018-06-24 23:00", "Asia/Novosibirsk").utc(),
+            "Nothing (Game in Pure C)",
+            "https://github.com/tsoding/nothing"
         ).asHTMLElement()
     );
