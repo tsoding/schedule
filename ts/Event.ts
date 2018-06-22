@@ -10,9 +10,9 @@ export default class Event implements UiComponent {
     }
 
     asHTMLElement(): JQuery<HTMLElement> {
-        return $('<div>')
-            .append($(`<h1>${this._title}</h1>`))
+        return $('<div class="event">')
+            .append($(`<h1><a href="https://twitch.tv/tsoding">${this._title}</a></h1>`))
             .append(new Countdown(this._datetime).asHTMLElement())
-            .append($(`<div>${this._description}</div>`));
+            .append($(`<div class="description">${this._description}</div>`));
     }
 }
