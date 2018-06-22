@@ -9,13 +9,10 @@ export default class Event implements UiComponent {
                 private _description: string) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
-        let node = $('<div>');
-
-        node.append($(`<h1>${this._title}</h1>`))
-        new Countdown(this._datetime).appendTo(node)
-        node.append($(`<div>${this._description}</div>`))
-
-        entry.append(node)
+    asHTMLElement(): JQuery<HTMLElement> {
+        return $('<div>')
+            .append($(`<h1>${this._title}</h1>`))
+            .append(new Countdown(this._datetime).asHTMLElement())
+            .append($(`<div>${this._description}</div>`));
     }
 }

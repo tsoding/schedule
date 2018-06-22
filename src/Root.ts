@@ -5,7 +5,7 @@ export default class Root implements UiComponent {
     constructor() {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
-        entry.append($("<div>Hello World</div>"))
+    asHTMLElement(): JQuery<HTMLElement> {
+        return $("<div>Hello World</div>");
     }
 }
