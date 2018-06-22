@@ -4,7 +4,7 @@ WATCHIFY=./node_modules/.bin/watchify
 all: dist/app.js dist/index.html
 
 watch: dist/index.html
-	$(WATCHIFY) ./src/app.ts -p tsify --outfile dist/app.js
+	$(WATCHIFY) -v ./src/app.ts -p tsify --outfile dist/app.js
 
 $(BROWSERIFY): package.json
 	npm install
