@@ -1,9 +1,10 @@
+TSS=$(wildcard src/*.ts)
 BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
 
 all: dist/app.js dist/index.html
 
-watch: dist/index.html
+watch: dist/index.html $(TSS)
 	$(WATCHIFY) -v ./src/app.ts -p tsify --outfile dist/app.js
 
 $(BROWSERIFY): package.json
@@ -12,7 +13,7 @@ $(BROWSERIFY): package.json
 $(WATCHIFY): package.json
 	npm install
 
-dist/app.js: dist $(BROWSERIFY)
+dist/app.js: dist $(BROWSERIFY) $(TSS)
 	$(BROWSERIFY) ./src/app.ts -p tsify -g uglifyify --outfile dist/app.js
 
 dist/index.html: dist html/index.html
