@@ -11,7 +11,7 @@ export default class Event implements UiComponent {
 
     appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
         if (moment().diff(this._datetime, 'days') < 5) {
-            let element = $('<div class="event">');
+            let element = $(`<div class="${moment().diff(this._datetime) >= 0 ? 'past event' : 'event'}">`);
             entry.append(element);
 
             element.append($(`<h1><a href="https://twitch.tv/tsoding">${this._title}</a></h1>`));
