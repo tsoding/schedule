@@ -3,10 +3,8 @@ BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
 LESSC=./node_modules/.bin/lessc
 
+.PHONY: all
 all: dist/app.js dist/index.html dist/reset.css dist/main.css
-
-watch: dist/index.html dist/reset.css dist/main.css $(TSS)
-	$(WATCHIFY) -v ./ts/app.ts -p tsify --outfile dist/app.js
 
 dist/app.js: dist $(TSS)
 	$(BROWSERIFY) ./ts/app.ts -p tsify -g uglifyify --outfile dist/app.js
@@ -23,7 +21,10 @@ dist/main.css: dist less/main.less
 dist:
 	mkdir -p dist
 
-.PHONY: all clean watch
+.PHONY: watch
+watch: dist/index.html dist/reset.css dist/main.css $(TSS)
+	$(WATCHIFY) -v $(TSS) -p tsify --outfile dist/app.js
 
+.PHONY: clean
 clean:
 	rm -rfv dist/

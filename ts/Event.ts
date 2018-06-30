@@ -9,10 +9,16 @@ export default class Event implements UiComponent {
                 private _description: string) {
     }
 
-    asHTMLElement(): JQuery<HTMLElement> {
-        return $('<div class="event">')
-            .append($(`<h1><a href="https://twitch.tv/tsoding">${this._title}</a></h1>`))
-            .append(new Countdown(this._datetime).asHTMLElement())
-            .append($(`<div class="description">${this._description}</div>`));
+    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+        if (moment().diff(this._datetime, 'days') < 5) {
+            let element = $(`<div class="${moment().diff(this._datetime) >= 0 ? 'past event' : 'event'}">`);
+            entry.append(element);
+
+            element.append($(`<h1><a href="https://twitch.tv/tsoding">${this._title}</a></h1>`));
+            new Countdown(this._datetime).appendTo(element);
+            element.append($(`<div class="description">${this._description}</div>`));
+        }
+
+        return entry;
     }
 }

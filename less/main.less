@@ -21,6 +21,7 @@ body {
     border: 1px solid (@foreground - #999);
     margin-top: 10px;
     text-align: center;
+    background: @background + #050505;
 
     h1 {
         font-size: 30px;
@@ -30,6 +31,14 @@ body {
     .description {
         margin-top: 20px;
         text-align: left;
+    }
+}
+
+.event.past {
+    color: @foreground - #999;
+    background: @background;
+    a {
+        color: @foreground - #999;
     }
 }
 
