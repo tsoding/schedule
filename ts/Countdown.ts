@@ -7,9 +7,12 @@ export default class Countdown implements UiComponent {
     constructor(private _datetime: moment.Moment) {
     }
 
-    asHTMLElement(): JQuery<HTMLElement> {
-        return $(`<div class="countdown">
-                      ${this._datetime.tz(moment.tz.guess()).format('llll')} (${this._datetime.fromNow()})
-                  </div>`)
+    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+        entry.append(
+            $(`<div class="countdown">
+                   ${this._datetime.tz(moment.tz.guess()).format('llll')} (${this._datetime.fromNow()})
+               </div>`)
+        )
+        return entry;
     }
 }
