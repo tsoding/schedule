@@ -2,10 +2,10 @@ import 'moment-timezone';
 import * as $ from 'jquery';
 import * as moment from 'moment';
 import Event from './Event';
-import EventsForCurrentMonth from './EventsForCurrentMonth';
+import EventsForCurrentPeriod from './EventsForCurrentPeriod';
 import Weekday from './Weekday'
 
-new EventsForCurrentMonth(
+new EventsForCurrentPeriod(
     [
         {
             name: "Nothing (Game in Pure C)",
