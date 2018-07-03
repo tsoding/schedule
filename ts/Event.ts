@@ -1,6 +1,8 @@
 import * as $ from 'jquery';
 import * as moment from 'moment';
 import Countdown from './Countdown';
+import FutureEvent from './FutureEvent';
+import PastEvent from './PastEvent';
 import UiComponent from './UiComponent';
 
 export default class Event implements UiComponent {
@@ -11,12 +13,19 @@ export default class Event implements UiComponent {
 
     appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
         if (moment().diff(this._datetime, 'days') < 5) {
-            let element = $(`<div class="${moment().diff(this._datetime) >= 0 ? 'past event' : 'event'}">`);
-            entry.append(element);
-
-            element.append($(`<h1><a href="https://twitch.tv/tsoding">${this._title}</a></h1>`));
-            new Countdown(this._datetime).appendTo(element);
-            element.append($(`<div class="description">${this._description}</div>`));
+            if (moment().diff(this._datetime) >= 0) {
+                new PastEvent(
+                    this._datetime,
+                    this._title,
+                    this._description
+                ).appendTo(entry);
+            } else {
+                new FutureEvent(
+                    this._datetime,
+                    this._title,
+                    this._description
+                ).appendTo(entry);
+            }
         }
 
         return entry;
