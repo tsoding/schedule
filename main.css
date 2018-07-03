@@ -31,10 +31,17 @@ body {
 .event.past a {
   color: #4b4b56;
 }
+.event.current {
+  border: 4px solid #f43841;
+  background: #5b0000;
+}
 a {
   font-kerning: normal;
   font-family: 'Cantarell', sans-serif;
   font-size: 25px;
   color: #73c936;
   text-decoration: none;
+}
+strong {
+  font-weight: bold;
 }
