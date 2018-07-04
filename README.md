@@ -8,5 +8,6 @@
 $ npm install
 $ make
 $ <browser> dist/index.html
-$ make watch                  # for watch mode
+$ make -j2 watch                  # for watch mode
+                                  # -j2 is required to run scss and ts watchers in parallel
 ```
