@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tsoding/schedule.svg?branch=master)](https://travis-ci.org/tsoding/schedule)
+[![Build Status](https://travis-ci.org/tsoding/schedule-beta.svg?branch=master)](https://travis-ci.org/tsoding/schedule-beta)
 
 # Schedule for Tsoding Streams
 
