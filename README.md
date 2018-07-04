@@ -2,6 +2,8 @@
 
 # Schedule for Tsoding Streams
 
+Deployed in https://tsoding.github.io/schedule-beta/
+
 ## Quick Start
 
 ```console
