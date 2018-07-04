@@ -1,7 +1,7 @@
 TSS=$(wildcard ts/*.ts)
 BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
-LESSC=./node_modules/.bin/lessc
+SASS=./node_modules/.bin/sass
 
 .PHONY: all
 all: dist/app.js dist/index.html dist/reset.css dist/main.css
@@ -15,15 +15,22 @@ dist/index.html: dist html/index.html
 dist/reset.css: dist css/reset.css
 	cp css/reset.css dist/reset.css
 
-dist/main.css: dist less/main.less
-	$(LESSC) less/main.less dist/main.css
+dist/main.css: dist scss/main.scss
+	$(SASS) --no-source-map scss/main.scss dist/main.css
 
 dist:
 	mkdir -p dist
 
 .PHONY: watch
-watch: dist/index.html dist/reset.css dist/main.css $(TSS)
+watch: dist/index.html dist/reset.css watch-ts watch-scss
+
+.PHONY: watch-ts
+watch-ts: dist $(TSS)
 	$(WATCHIFY) -v $(TSS) -p tsify --outfile dist/app.js
+
+.PHONY: watch-scss
+watch-scss: dist scss/main.scss
+	$(SASS) --watch scss/main.scss dist/main.css
 
 .PHONY: clean
 clean:

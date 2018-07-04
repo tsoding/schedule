@@ -1,12 +1,13 @@
-@background: #181818;
-@foreground: #e4e4ef;
-@green: #73c936;
-@yellow: #ffdd33;
-@red: #f43841;
+$background: #181818;
+$foreground: #e4e4ef;
+$dimmed_foreground: desaturate(darken($foreground, 60%), 60%);
+$green: #73c936;
+$yellow: #ffdd33;
+$red: #f43841;
 
 body {
-    background: @background;
-    color: @foreground;
+    background: $background;
+    color: $foreground;
     width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -19,10 +20,10 @@ body {
 
 .event {
     padding: 20px;
-    border: 1px solid (@foreground - #999);
+    border: 1px solid $dimmed_foreground;
     margin-top: 10px;
     text-align: center;
-    background: @background + #050505;
+    background: lighten($background, 1%);
 
     h1 {
         font-size: 30px;
@@ -36,26 +37,26 @@ body {
 }
 
 .event.past {
-    color: @foreground - #999;
-    background: @background;
+    color: $dimmed_foreground;
+    background: $background;
     a {
-        color: @foreground - #999;
+        color: $dimmed_foreground;
     }
 }
 
 .event.current {
-    border: 4px solid @red;
-    background: @red - #999;
+    border: 3px solid $red;
 }
 
 a {
     font-kerning: normal;
     font-family: 'Cantarell', sans-serif;
     font-size: 25px;
-    color: @green;
+    color: $green;
     text-decoration: none;
 }
 
 strong {
     font-weight: bold;
 }
+
