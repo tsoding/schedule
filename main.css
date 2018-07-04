@@ -4,17 +4,19 @@ body {
   width: 720px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Cantarell', sans-serif;
+  font-family: "Cantarell", sans-serif;
 }
+
 .countdown {
   font-size: 15px;
 }
+
 .event {
   padding: 20px;
-  border: 1px solid #4b4b56;
+  border: 1px solid #515151;
   margin-top: 10px;
   text-align: center;
-  background: #1d1d1d;
+  background: #1b1b1b;
 }
 .event h1 {
   font-size: 30px;
@@ -24,24 +26,27 @@ body {
   margin-top: 20px;
   text-align: left;
 }
+
 .event.past {
-  color: #4b4b56;
+  color: #515151;
   background: #181818;
 }
 .event.past a {
-  color: #4b4b56;
+  color: #515151;
 }
+
 .event.current {
-  border: 4px solid #f43841;
-  background: #5b0000;
+  border: 3px solid #f43841;
 }
+
 a {
   font-kerning: normal;
-  font-family: 'Cantarell', sans-serif;
+  font-family: "Cantarell", sans-serif;
   font-size: 25px;
   color: #73c936;
   text-decoration: none;
 }
+
 strong {
   font-weight: bold;
 }
