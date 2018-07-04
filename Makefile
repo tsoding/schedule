@@ -26,7 +26,7 @@ watch: dist/index.html dist/reset.css watch-ts watch-scss
 
 .PHONY: watch-ts
 watch-ts: dist $(TSS)
-	$(WATCHIFY) -v $(TSS) -p tsify --outfile dist/app.js
+	$(WATCHIFY) ./ts/app.ts -v -p tsify --outfile dist/app.js
 
 .PHONY: watch-scss
 watch-scss: dist scss/main.scss
