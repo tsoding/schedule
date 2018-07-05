@@ -18,7 +18,8 @@ export default class EventsForDay implements UiComponent {
                 new Event({
                     datetime: moment.tz(`${this._date} ${p.time}`, this._timezone).utc(),
                     title: p.name,
-                    description: p.description
+                    description: p.description,
+                    url: "https://twitch.tv/tsoding"
                 }).appendTo(entry)
             }
         })

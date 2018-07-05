@@ -12,4 +12,5 @@ export interface Event {
     datetime: moment.Moment,
     title: string,
     description: string,
+    url: string,
 }

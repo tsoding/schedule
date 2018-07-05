@@ -12,7 +12,7 @@ export default class PastEvent implements UiComponent {
         let element = $(`<div class="past event">`);
         entry.append(element);
 
-        element.append($(`<h1><a href="https://twitch.tv/tsoding">${this._event.title}</a></h1>`));
+        element.append($(`<h1><a href="${this._event.url}">${this._event.title}</a></h1>`));
         new Countdown(this._event.datetime, "finished ").appendTo(element);
         element.append($(`<div class="description">${this._event.description}</div>`));
 
