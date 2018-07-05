@@ -1,3 +1,4 @@
+$page_width: 720px;
 $background: #181818;
 $foreground: #e4e4ef;
 $dimmed_foreground: desaturate(darken($foreground, 60%), 60%);
@@ -8,14 +9,10 @@ $red: #f43841;
 body {
     background: $background;
     color: $foreground;
-    width: 720px;
+    width: $page_width;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Cantarell', sans-serif;
-}
-
-.countdown {
-    font-size: 15px;
 }
 
 .event {
@@ -30,9 +27,18 @@ body {
         margin-bottom: 10px;
     }
 
+    .countdown {
+        font-size: 15px;
+    }
+
     .description {
         margin-top: 20px;
         text-align: left;
+        color: desaturate(darken($foreground, 40%), 40%);
+        line-height: 20px;
+        width: $page_width * 0.75;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -40,6 +46,10 @@ body {
     color: $dimmed_foreground;
     background: $background;
     a {
+        color: $dimmed_foreground;
+    }
+
+    .description {
         color: $dimmed_foreground;
     }
 }

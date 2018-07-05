@@ -16,7 +16,7 @@ new EventsForCurrentPeriod(
         },
         {
             name: "HyperNerd (Bot in Haskell)",
-            description: "Enhancing my automatic ban machine. Join to help to test it!",
+            description: "Enhancing my Total Surveillance Automatic Ban Machine. Join to help to test it!",
             url: "https://github.com/tsoding/HyperNerd",
             days: [Weekday.Thu],
             time: "23:00",
