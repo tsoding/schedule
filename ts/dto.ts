@@ -7,3 +7,9 @@ export interface Project {
     days: Array<Weekday>,
     time: string,
 }
+
+export interface Event {
+    datetime: moment.Moment,
+    title: string,
+    description: string,
+}

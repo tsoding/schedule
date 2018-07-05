@@ -15,11 +15,11 @@ export default class EventsForDay implements UiComponent {
 
         this._recipe.forEach((p) => {
             if (p.days.includes(weekday)) {
-                new Event(
-                    moment.tz(`${this._date} ${p.time}`, this._timezone).utc(),
-                    p.name,
-                    p.description
-                ).appendTo(entry)
+                new Event({
+                    datetime: moment.tz(`${this._date} ${p.time}`, this._timezone).utc(),
+                    title: p.name,
+                    description: p.description
+                }).appendTo(entry)
             }
         })
 
