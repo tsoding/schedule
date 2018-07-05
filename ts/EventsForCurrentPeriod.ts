@@ -1,12 +1,12 @@
 import * as $ from 'jquery';
+import * as dto from './dto';
 import * as moment from 'moment';
 import Event from './Event';
 import EventsForDay from './EventsForDay'
-import Project from './Project'
 import UiComponent from './UiComponent';
 
 export default class EventsForCurrentPeriod implements UiComponent {
-    constructor(private _recipe: Array<Project>,
+    constructor(private _recipe: Array<dto.Project>,
                 private _timezone: string) {
     }
 
