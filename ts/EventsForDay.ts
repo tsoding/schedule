@@ -1,11 +1,11 @@
 import * as $ from 'jquery';
+import * as dto from './dto';
 import * as moment from 'moment';
 import Event from './Event'
-import Project from './Project';
 import UiComponent from './UiComponent';
 
 export default class EventsForDay implements UiComponent {
-    constructor(private _recipe: Array<Project>,
+    constructor(private _recipe: Array<dto.Project>,
                 private _date: string,
                 private _timezone: string) {
     }
@@ -15,11 +15,12 @@ export default class EventsForDay implements UiComponent {
 
         this._recipe.forEach((p) => {
             if (p.days.includes(weekday)) {
-                new Event(
-                    moment.tz(`${this._date} ${p.time}`, this._timezone).utc(),
-                    p.name,
-                    p.description
-                ).appendTo(entry)
+                new Event({
+                    datetime: moment.tz(`${this._date} ${p.time}`, this._timezone).utc(),
+                    title: p.name,
+                    description: p.description,
+                    url: p.url
+                }).appendTo(entry)
             }
         })
 
