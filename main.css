@@ -7,10 +7,6 @@ body {
   font-family: "Cantarell", sans-serif;
 }
 
-.countdown {
-  font-size: 15px;
-}
-
 .event {
   padding: 20px;
   border: 1px solid #515151;
@@ -22,9 +18,17 @@ body {
   font-size: 30px;
   margin-bottom: 10px;
 }
+.event .countdown {
+  font-size: 15px;
+}
 .event .description {
   margin-top: 20px;
   text-align: left;
+  color: #848484;
+  line-height: 20px;
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .event.past {
@@ -32,6 +36,9 @@ body {
   background: #181818;
 }
 .event.past a {
+  color: #515151;
+}
+.event.past .description {
   color: #515151;
 }
 
