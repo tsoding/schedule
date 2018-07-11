@@ -75,7 +75,7 @@ body {
         color: $dimmed_foreground;
     }
 
-    // TODO: Cancelled stamp is not centered vertically
+    // TODO(#49): Cancelled stamp is not centered vertically
     .cancelled-stamp {
         position: relative;
         height: 0px;
