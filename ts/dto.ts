@@ -3,7 +3,8 @@ import Weekday from './Weekday';
 
 export interface State {
     projects: Array<Project>,
-    timezone: string
+    timezone: string,
+    extraEvents: Array<Event>
 }
 
 export interface Project {

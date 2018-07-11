@@ -29,5 +29,6 @@ new EventsForCurrentPeriod({
             time: "23:00",
         }
     ],
-    timezone: 'Asia/Novosibirsk'
+    timezone: 'Asia/Novosibirsk',
+    extraEvents: []
 }).appendTo($('#root'));
