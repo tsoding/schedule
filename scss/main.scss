@@ -31,6 +31,14 @@ body {
         font-size: 15px;
     }
 
+    .timestamp {
+        position: relative;
+        color: $dimmed_foreground;
+        font-size: 11px;
+        height: 0px;
+        text-align: left;
+    }
+
     .description {
         margin-top: 20px;
         text-align: left;
