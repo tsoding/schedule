@@ -31,6 +31,11 @@ body {
 .event .timestamp a {
   color: #515151;
 }
+.event .watch {
+  height: 0px;
+  text-align: right;
+  color: #f43841;
+}
 .event .description {
   margin-top: 20px;
   text-align: left;
@@ -99,4 +104,9 @@ strong {
 }
 .markdown a {
   border-bottom: 1px solid;
+}
+
+footer {
+  padding: 10px;
+  margin-top: 10px;
 }
