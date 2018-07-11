@@ -29,6 +29,15 @@ new EventsForCurrentPeriod({
             time: "23:00",
         }
     ],
+    extraEvents: [
+        {
+            date: "2018-07-11",
+            time: "23:00",
+            title: "Schedule Web App in TypeScript",
+            description: `<p>Schedule for Tsoding Streams. Front-End only Single Page Application without any Back-End. Makes all of the schedule building work yours computer problem. Saves me money on hosting.</p>
+<p>This is an extra stream to get some work done for the upcoming <a href="https://github.com/tsoding/schedule-beta/milestone/1">release of the new Schedule Page</a></p>`,
+            url: "https://github.com/tsoding/schedule-beta"
+        }
+    ],
     timezone: 'Asia/Novosibirsk',
-    extraEvents: []
 }).appendTo($('#root'));

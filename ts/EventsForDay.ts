@@ -23,6 +23,17 @@ export default class EventsForDay implements UiComponent {
             }
         })
 
+        this._state.extraEvents.forEach((ee) => {
+            if (ee.date == this._date) {
+                new Event({
+                    datetime: moment.tz(`${this._date} ${ee.time}`, this._state.timezone).utc(),
+                    title: ee.title,
+                    description: ee.description,
+                    url: ee.url
+                }).appendTo(entry)
+            }
+        })
+
         return entry;
     }
 }
