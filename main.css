@@ -59,6 +59,14 @@ body {
 .event.past .description {
   color: #515151;
 }
+.event.past .cancelled-stamp {
+  position: relative;
+  height: 0px;
+  color: #f43841;
+  font-size: 50px;
+  transform: rotate(20deg);
+  top: -80px;
+}
 
 .event.current {
   border: 3px solid #f43841;
