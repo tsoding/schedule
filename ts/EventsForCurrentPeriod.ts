@@ -16,10 +16,9 @@ export default class EventsForCurrentPeriod implements UiComponent {
         let day = moment().utc().startOf('day').subtract(14, 'days')
         for (let i = 0; i < 28; ++i) {
             new EventsForDay(
-                this._state.projects,
+                this._state,
                 day.format("YYYY-MM-DD"),
-                this._state.timezone
-            ).appendTo(entry);
+             ).appendTo(entry);
             day = day.add(1, 'days')
         }
 
