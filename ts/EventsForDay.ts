@@ -19,7 +19,7 @@ export default class EventsForDay implements UiComponent {
                     title: p.name,
                     description: p.description,
                     url: p.url
-                }).appendTo(entry)
+                }, this._state.cancelledEvents).appendTo(entry)
             }
         })
 
@@ -30,7 +30,7 @@ export default class EventsForDay implements UiComponent {
                     title: ee.title,
                     description: ee.description,
                     url: ee.url
-                }).appendTo(entry)
+                }, this._state.cancelledEvents).appendTo(entry)
             }
         })
 
