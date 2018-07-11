@@ -18,7 +18,7 @@ export default class EventsForCurrentPeriod implements UiComponent {
             new EventsForDay(
                 this._state,
                 day.format("YYYY-MM-DD"),
-             ).appendTo(entry);
+             ).appendTo(element);
             day = day.add(1, 'days')
         }
 
