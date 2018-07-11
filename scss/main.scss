@@ -74,6 +74,16 @@ body {
     .description {
         color: $dimmed_foreground;
     }
+
+    // TODO: Cancelled stamp is not centered vertically
+    .cancelled-stamp {
+        position: relative;
+        height: 0px;
+        color: #f43841;
+        font-size: 50px;
+        transform: rotate(20deg);
+        top: -80px;
+    }
 }
 
 .event.current {

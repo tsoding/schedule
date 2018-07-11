@@ -39,5 +39,6 @@ new EventsForCurrentPeriod({
             url: "https://github.com/tsoding/schedule-beta"
         }
     ],
+    cancelledEvents: [],
     timezone: 'Asia/Novosibirsk',
 }).appendTo($('#root'));
