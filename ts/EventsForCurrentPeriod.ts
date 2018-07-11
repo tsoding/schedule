@@ -6,8 +6,7 @@ import EventsForDay from './EventsForDay'
 import UiComponent from './UiComponent';
 
 export default class EventsForCurrentPeriod implements UiComponent {
-    constructor(private _recipe: Array<dto.Project>,
-                private _timezone: string) {
+    constructor(private _state: dto.State) {
     }
 
     appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
@@ -17,9 +16,9 @@ export default class EventsForCurrentPeriod implements UiComponent {
         let day = moment().utc().startOf('day').subtract(14, 'days')
         for (let i = 0; i < 28; ++i) {
             new EventsForDay(
-                this._recipe,
+                this._state.projects,
                 day.format("YYYY-MM-DD"),
-                this._timezone
+                this._state.timezone
             ).appendTo(entry);
             day = day.add(1, 'days')
         }

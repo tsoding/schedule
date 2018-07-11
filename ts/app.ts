@@ -5,8 +5,8 @@ import Event from './Event';
 import EventsForCurrentPeriod from './EventsForCurrentPeriod';
 import Weekday from './Weekday'
 
-new EventsForCurrentPeriod(
-    [
+new EventsForCurrentPeriod({
+    projects: [
         {
             name: "Nothing (Game in Pure C)",
             description: "A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2",
@@ -29,5 +29,5 @@ new EventsForCurrentPeriod(
             time: "23:00",
         }
     ],
-    'Asia/Novosibirsk'
-).appendTo($('#root'));
+    timezone: 'Asia/Novosibirsk'
+}).appendTo($('#root'));

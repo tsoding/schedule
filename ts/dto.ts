@@ -1,6 +1,11 @@
 import * as moment from 'moment';
 import Weekday from './Weekday';
 
+export interface State {
+    projects: Array<Project>,
+    timezone: string
+}
+
 export interface Project {
     name: string,
     description: string,
