@@ -2,6 +2,8 @@
 
 # Schedule for Tsoding Streams
 
+Schedule for Tsoding Streams. Front-End only Single Page Application without any Back-End. Makes all of the schedule building work yours computer problem. Saves me money on hosting.
+
 Deployed in https://tsoding.github.io/schedule-beta/
 
 ## Prerequisites
