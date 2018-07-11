@@ -22,7 +22,7 @@ dist:
 	mkdir -p dist
 
 .PHONY: watch
-watch: dist/index.html dist/reset.css watch-ts watch-scss
+watch: dist/reset.css watch-ts watch-scss watch-html
 
 .PHONY: watch-ts
 watch-ts: dist $(TSS)
@@ -31,6 +31,13 @@ watch-ts: dist $(TSS)
 .PHONY: watch-scss
 watch-scss: dist scss/main.scss
 	$(SASS) --watch scss/main.scss dist/main.css
+
+.PHONY: watch-html
+watch-html: dist html/index.html
+	cp html/index.html dist/
+	while inotifywait -q -e modify,move_self html/index.html; do \
+		cp html/index.html dist/;                                \
+	done
 
 .PHONY: clean
 clean:

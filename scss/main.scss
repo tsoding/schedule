@@ -23,12 +23,24 @@ body {
     background: lighten($background, 1%);
 
     h1 {
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 10px;
     }
 
     .countdown {
         font-size: 15px;
+    }
+
+    .timestamp {
+        position: relative;
+        color: $dimmed_foreground;
+        font-size: 11px;
+        height: 0px;
+        text-align: left;
+
+        a {
+            color: $dimmed_foreground;
+        }
     }
 
     .description {
@@ -39,6 +51,10 @@ body {
         width: $page_width * 0.75;
         margin-left: auto;
         margin-right: auto;
+
+        a {
+            color: darken($green, 5%)
+        }
     }
 }
 
@@ -61,7 +77,6 @@ body {
 a {
     font-kerning: normal;
     font-family: 'Cantarell', sans-serif;
-    font-size: 25px;
     color: $green;
     text-decoration: none;
 }
@@ -97,5 +112,15 @@ strong {
         left: 445px;
         top: -75px;
         transform: rotate(30deg);
+    }
+}
+
+.markdown {
+    p {
+        margin-top: 10px;
+    }
+
+    a {
+        border-bottom: 1px solid;
     }
 }
