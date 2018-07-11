@@ -43,6 +43,12 @@ body {
         }
     }
 
+    .watch {
+        height: 0px;
+        text-align: right;
+        color: $red;
+    }
+
     .description {
         margin-top: 20px;
         text-align: left;
@@ -123,4 +129,9 @@ strong {
     a {
         border-bottom: 1px solid;
     }
+}
+
+footer {
+    padding: 10px;
+    margin-top: 10px;
 }
