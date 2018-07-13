@@ -7,7 +7,7 @@ export default class CancelledEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+    appendTo(entry: JQuery<HTMLElement>): void {
         let element = $(`<div id="_${this._event.datetime.utc().unix()}" class="past event">`);
         entry.append(element);
 
@@ -17,7 +17,5 @@ export default class CancelledEvent implements UiComponent {
         new Countdown(this._event.datetime, "finished ").appendTo(element);
         element.append($(`<div class="description markdown">${this._event.description}</div>`));
         element.append($(`<div class="cancelled-stamp">CANCELLED</div>`));
-
-        return entry;
     }
 }

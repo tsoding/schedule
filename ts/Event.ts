@@ -13,7 +13,7 @@ export default class Event implements UiComponent {
                 private _canceldEvents: Array<number>) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+    appendTo(entry: JQuery<HTMLElement>): void {
         if (moment().diff(this._event.datetime, 'days') < 5) {
             let secondsDiff = moment().diff(this._event.datetime, 'seconds');
 
@@ -27,7 +27,5 @@ export default class Event implements UiComponent {
                 new FutureEvent(this._event).appendTo(entry);
             }
         }
-
-        return entry;
     }
 }

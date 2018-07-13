@@ -8,12 +8,11 @@ export default class Countdown implements UiComponent {
                 private _prefix: string) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+    appendTo(entry: JQuery<HTMLElement>): void {
         entry.append(
             $(`<div class="countdown">
                    ${this._datetime.tz(moment.tz.guess()).format('llll')} (${this._prefix}${this._datetime.fromNow()})
                </div>`)
         )
-        return entry;
     }
 }

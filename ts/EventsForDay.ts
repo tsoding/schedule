@@ -9,7 +9,7 @@ export default class EventsForDay implements UiComponent {
                 private _date: string) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+    appendTo(entry: JQuery<HTMLElement>): void {
         let weekday = moment.tz(this._date, this._state.timezone).isoWeekday()
 
         this._state.projects.forEach((p) => {
@@ -33,7 +33,5 @@ export default class EventsForDay implements UiComponent {
                 }, this._state.cancelledEvents).appendTo(entry)
             }
         })
-
-        return entry;
     }
 }

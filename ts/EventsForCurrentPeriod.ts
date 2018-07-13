@@ -9,7 +9,7 @@ export default class EventsForCurrentPeriod implements UiComponent {
     constructor(private _state: dto.State) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): JQuery<HTMLElement> {
+    appendTo(entry: JQuery<HTMLElement>): void {
         let element = $('<div class="events">');
         entry.append(element);
 
@@ -21,7 +21,5 @@ export default class EventsForCurrentPeriod implements UiComponent {
              ).appendTo(element);
             day = day.add(1, 'days')
         }
-
-        return entry;
     }
 }
