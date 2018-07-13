@@ -16,7 +16,7 @@ export default class Event implements UiComponent {
     appendTo(entry: JQuery<HTMLElement>): void {
         let secondsDiff = moment().diff(this._event.datetime, 'seconds');
 
-        if (this._canceldEvents.findIndex((c) => c == this._event.datetime.unix()) >= 0) {
+        if (this.isCancelled()) {
             new CancelledEvent(this._event).appendTo(entry);
         } else if (0 <= secondsDiff && secondsDiff < 4 * 60 * 60) {
             new CurrentEvent(this._event).appendTo(entry);
@@ -25,5 +25,17 @@ export default class Event implements UiComponent {
         } else {
             new FutureEvent(this._event).appendTo(entry);
         }
+    }
+
+    isPast(): boolean {
+        if (this.isCancelled()) {
+            return moment().diff(this._event.datetime, 'seconds') > 0;
+        } else {
+            return moment().diff(this._event.datetime, 'seconds') >= 4 * 60 * 60;
+        }
+    }
+
+    isCancelled(): boolean {
+        return this._canceldEvents.findIndex((c) => c == this._event.datetime.unix()) >= 0;
     }
 }
