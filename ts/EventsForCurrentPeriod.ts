@@ -13,8 +13,8 @@ export default class EventsForCurrentPeriod implements UiComponent {
         let element = $('<div class="events">');
         entry.append(element);
 
-        let day = moment().utc().startOf('day').subtract(14, 'days')
-        for (let i = 0; i < 28; ++i) {
+        let day = moment().utc().startOf('day').subtract(3, 'days')
+        for (let i = 0; i < 20; ++i) {
             new EventsForDay(
                 this._state,
                 day.format("YYYY-MM-DD"),
