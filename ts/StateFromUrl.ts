@@ -7,7 +7,7 @@ export default class StateFromUrl {
     }
 
     asPromise(): Promise<dto.State> {
-        // TODO: StateFromUrl object is not implemented
+        // TODO(#56): StateFromUrl object is not implemented
         return new Promise(
             (resolve, reject) =>
                 resolve({
