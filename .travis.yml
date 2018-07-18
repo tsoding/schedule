@@ -1,5 +1,16 @@
 language: node_js
 node_js:
-- '8.9.4'
+- 8.9.4
 script:
 - make
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  keep-history: true
+  on:
+    branch: master
+  local-dir: dist/
+env:
+  matrix:
+    secure: qz2CP46lnEIUvl0yQWZvWt3YmzbgON03QJqP6QgwhMf1zptp1kfY1vjjGYrppMDN0uBkNMm6KoX5MtLG6Aa+1+rbYW6NzqUSg9I0q9LL0cr6RelfF5GqS+4MYzVB5d8aG2cYQdXcTfw6+ZOqfQqhkpYJtMUQSbqMKh/HX8b1r0pt5uL+YUO73OzynPj4BoJI6RZj7Fasj7oTdW/lERYzf23T+fe2466mr7EH7R5TU+ML1XfZMJmYs46yGBs4cnNOBoKK7jLn9Ni06uWZSZKUR067gSr1J9o1/liYtbGcCdrM60qBYWXetO6MhLGjjzyZdwJbjrUXWD0V13SNRrz5t52VcgwnlY3qVaC/OsUmYlZ1QjPi2k/RDAHRi9ZDi7LQvtCeizZaXXXBEyLFA+7jGrmxtinshe4FnmtQeP90OoPXpU+w0OZ3YxAIy83S8E+r0ETxj+l5FUtyOS4U8BvARJfeOULWupqmPMA1HoLTdFl9KzLoJ8MJuMhguOATTw6lonoxUozaAHpAL6s2xc1sFkEm8n8USF5aopBhsfmnLzv21LfsV/gN6HKhBzSXlby9Yu8sJGaOB/WF5opsG71+Ohlbk4MX1DaZJG980HPKDOVzr4VgtTJvrEmU6q0sIISB6WlbFUA73AtnZi+pb8V27yNqOx86pQE6gKmi0VgHEGQ=
