@@ -5,6 +5,7 @@ import Event from './Event'
 import UiComponent from './UiComponent';
 import List from './List';
 
+// TODO: EventsForDay can be a concatenation of RecurringEventsForDay and ScheduledEventsForDay objects
 export default class EventsForDay implements UiComponent, List<Event> {
     constructor(private _state: dto.State,
                 private _date: string) {
@@ -17,6 +18,14 @@ export default class EventsForDay implements UiComponent, List<Event> {
     asArray(): Array<Event> {
         let weekday = moment.tz(this._date, this._state.timezone).isoWeekday();
         return this._state.projects
+            .filter(
+                (p) => {
+                    let thisDate = moment.tz(`${this._date}`, this._state.timezone).utc().unix();
+                    let starts = p.starts ? moment.tz(`${p.starts}`, this._state.timezone).utc().unix() : 0;
+                    let ends = p.ends ? moment.tz(`${p.ends}`, this._state.timezone).utc().unix() : Number.MAX_SAFE_INTEGER;
+                    return starts <= thisDate && thisDate <= ends;
+                }
+            )
             .filter(
                 (p) => p.days.includes(weekday)
             )
