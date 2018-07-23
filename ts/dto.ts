@@ -8,14 +8,19 @@ export interface State {
     cancelledEvents: Array<number>
 }
 
+// TODO(#70): dto.Project should be called dto.RecurringEvent
 export interface Project {
     name: string,
     description: string,
     url: string,
     days: Array<Weekday>,
     time: string,
+    starts?: string,
+    ends?: string,
+    comment?: string
 }
 
+// TODO(#71): dto.ExtraEvent should be called dto.ScheduledEvent
 export interface ExtraEvent {
     date: string,
     time: string,
