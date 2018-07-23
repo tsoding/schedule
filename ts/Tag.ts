@@ -4,11 +4,7 @@ import UiComponent from './UiComponent';
 export default class Tag implements UiComponent {
     constructor(private _name: string,
                 private _body?: UiComponent,
-                private _classes?: string[],
-                private _id?: string) {
-        if (typeof this._classes === 'undefined') {
-            this._classes = [];
-        }
+                private _attrs?: {[key: string]: any}) {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
@@ -18,12 +14,8 @@ export default class Tag implements UiComponent {
             this._body.appendTo(element);
         }
 
-        if (this._classes) {
-            element.addClass(this._classes)
-        }
-
-        if (this._id) {
-            element.attr("id", this._id)
+        if (this._attrs) {
+            element.attr(this._attrs)
         }
 
         entry.append(element);

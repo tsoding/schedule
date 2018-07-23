@@ -16,7 +16,7 @@ export default class Countdown implements UiComponent {
                 `${this._datetime.tz(moment.tz.guess()).format('llll')} \
                  (${this._prefix}${this._datetime.fromNow()})`
             ),
-            ["countdown"]
+            {"class": "countdown"}
         ).appendTo(entry)
     }
 }
