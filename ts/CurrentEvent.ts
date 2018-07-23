@@ -4,6 +4,7 @@ import * as moment from 'moment';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
 
+// TODO(#63): CurrentEvent doesn't use HTML components
 export default class CurrentEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
