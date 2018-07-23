@@ -20,7 +20,7 @@ export interface Project {
     comment?: string
 }
 
-// TODO: dto.ExtraEvent should be called dto.ScheduledEvent
+// TODO(#71): dto.ExtraEvent should be called dto.ScheduledEvent
 export interface ExtraEvent {
     date: string,
     time: string,
