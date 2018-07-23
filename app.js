@@ -613,37 +613,55 @@ var moment=module.exports=require("./moment-timezone");moment.tz.load(require(".
 },{}],6:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),Countdown_1=require("./Countdown"),CancelledEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){var t=$('<div id="_'+this._event.datetime.utc().unix()+'" class="past event">');e.append(t),t.append($('<div class="timestamp"><a href="#_'+this._event.datetime.utc().unix()+'">'+this._event.datetime.utc().unix()+"</a></div>")),t.append($('<h1><a href="'+this._event.url+'">'+this._event.title+"</a></h1>")),new Countdown_1.default(this._event.datetime,"finished ").appendTo(t),t.append($('<div class="description markdown">'+this._event.description+"</div>")),t.append($('<div class="cancelled-stamp">CANCELLED</div>'))},e}();exports.default=CancelledEvent;
 
-},{"./Countdown":8,"jquery":1}],7:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ConcatLists=function(){function t(t){this._input=t}return t.prototype.asArray=function(){var t=[];return this._input.forEach(function(r){t=t.concat(r.asArray())}),t},t}();exports.default=ConcatLists;
+},{"./Countdown":9,"jquery":1}],7:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ComponentsList=function(){function t(t){this._components=t}return t.prototype.appendTo=function(t){this._components.forEach(function(n){return n.appendTo(t)})},t}();exports.default=ComponentsList;
 
 },{}],8:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var $=require("jquery"),moment=require("moment"),Countdown=function(){function e(e,t){this._datetime=e,this._prefix=t}return e.prototype.appendTo=function(e){e.append($('<div class="countdown">\n                   '+this._datetime.tz(moment.tz.guess()).format("llll")+" ("+this._prefix+this._datetime.fromNow()+")\n               </div>"))},e}();exports.default=Countdown;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ConcatLists=function(){function t(t){this._input=t}return t.prototype.asArray=function(){var t=[];return this._input.forEach(function(r){t=t.concat(r.asArray())}),t},t}();exports.default=ConcatLists;
 
-},{"jquery":1,"moment":5,"moment-timezone":3}],9:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var moment=require("moment"),Div_1=require("./Div"),Text_1=require("./Text"),Countdown=function(){function e(e,t){this._datetime=e,this._prefix=t}return e.prototype.appendTo=function(e){new Div_1.default(new Text_1.default(this._datetime.tz(moment.tz.guess()).format("llll")+"                  ("+this._prefix+this._datetime.fromNow()+")"),{class:"countdown"}).appendTo(e)},e}();exports.default=Countdown;
+
+},{"./Div":11,"./Text":22,"moment":5,"moment-timezone":3}],10:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),Countdown_1=require("./Countdown"),CurrentEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){var t=$('<div id="_'+this._event.datetime.utc().unix()+'" class="current event">');e.append(t),t.append($('<div class="timestamp">\n                            <a href="#_'+this._event.datetime.utc().unix()+'">'+this._event.datetime.utc().unix()+"</a>\n                          </div>")),t.append($('<div class="watch">\n                            <a href="https://twitch.tv/tsoding">\n                              <i class="watch fas fa-external-link-alt fa-lg"></i>\n                            </a>\n                          </div>')),t.append($('<h1><a href="'+this._event.url+'">'+this._event.title+"</a></h1>")),new Countdown_1.default(this._event.datetime,"started ").appendTo(t),t.append($('<div class="description markdown">'+this._event.description+"</div>"))},e}();exports.default=CurrentEvent;
 
-},{"./Countdown":8,"jquery":1}],10:[function(require,module,exports){
+},{"./Countdown":9,"jquery":1}],11:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Tag_1=require("./Tag"),Div=function(){function t(t,e){this._body=t,this._attrs=e}return t.prototype.appendTo=function(t){new Tag_1.default("div",this._body,this._attrs).appendTo(t)},t}();exports.default=Div;
+
+},{"./Tag":21}],12:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var moment=require("moment"),CancelledEvent_1=require("./CancelledEvent"),CurrentEvent_1=require("./CurrentEvent"),FutureEvent_1=require("./FutureEvent"),PastEvent_1=require("./PastEvent"),Event=function(){function e(e,t){this._event=e,this._canceldEvents=t}return e.prototype.appendTo=function(e){var t=moment().diff(this._event.datetime,"seconds");this.isCancelled()?new CancelledEvent_1.default(this._event).appendTo(e):0<=t&&t<14400?new CurrentEvent_1.default(this._event).appendTo(e):t>=14400?new PastEvent_1.default(this._event).appendTo(e):new FutureEvent_1.default(this._event).appendTo(e)},e.prototype.isPast=function(){return this.isCancelled()?moment().diff(this._event.datetime,"seconds")>0:moment().diff(this._event.datetime,"seconds")>=14400},e.prototype.isCancelled=function(){var e=this;return this._canceldEvents.findIndex(function(t){return t==e._event.datetime.unix()})>=0},e}();exports.default=Event;
 
-},{"./CancelledEvent":6,"./CurrentEvent":9,"./FutureEvent":14,"./PastEvent":15,"moment":5}],11:[function(require,module,exports){
+},{"./CancelledEvent":6,"./CurrentEvent":10,"./FutureEvent":16,"./PastEvent":19,"moment":5}],13:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),moment=require("moment"),EventsForDay_1=require("./EventsForDay"),ConcatLists_1=require("./ConcatLists"),EventsForCurrentPeriod=function(){function t(t){this._state=t}return t.prototype.appendTo=function(t){var e=this,r=$('<div class="events">'),n=moment().clone().utc().startOf("day").subtract(2,"days"),o=new ConcatLists_1.default(Array.from(new Array(16),function(t,r){return new EventsForDay_1.default(e._state,n.clone().add(r,"days").format("YYYY-MM-DD"))})).asArray();o.filter(function(t){return t.isPast()}).slice(-2).forEach(function(t){return t.appendTo(r)}),o.filter(function(t){return!t.isPast()}).forEach(function(t){return t.appendTo(r)}),t.append(r)},t}();exports.default=EventsForCurrentPeriod;
 
-},{"./ConcatLists":7,"./EventsForDay":12,"jquery":1,"moment":5}],12:[function(require,module,exports){
+},{"./ConcatLists":8,"./EventsForDay":14,"jquery":1,"moment":5}],14:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var moment=require("moment"),Event_1=require("./Event"),EventsForDay=function(){function t(t,e){this._state=t,this._date=e}return t.prototype.appendTo=function(t){this.asArray().forEach(function(e){return e.appendTo(t)})},t.prototype.asArray=function(){var t=this,e=moment.tz(this._date,this._state.timezone).isoWeekday();return this._state.projects.filter(function(t){return t.days.includes(e)}).map(function(e){return new Event_1.default({datetime:moment.tz(t._date+" "+e.time,t._state.timezone).utc(),title:e.name,description:e.description,url:e.url},t._state.cancelledEvents)}).concat(this._state.extraEvents.filter(function(e){return e.date==t._date}).map(function(e){return new Event_1.default({datetime:moment.tz(t._date+" "+e.time,t._state.timezone).utc(),title:e.title,description:e.description,url:e.url},t._state.cancelledEvents)}))},t}();exports.default=EventsForDay;
 
-},{"./Event":10,"moment":5}],13:[function(require,module,exports){
+},{"./Event":12,"moment":5}],15:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),FailedScheduleLoad=function(){function e(){}return e.prototype.appendTo=function(e){e.append($("<div>Failed to load schedule data. Keep refreshing.</div>"))},e}();exports.default=FailedScheduleLoad;
 
-},{"jquery":1}],14:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),Countdown_1=require("./Countdown"),FutureEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){var t=$('<div id="_'+this._event.datetime.utc().unix()+'" class="event">');e.append(t),t.append($('<div class="timestamp"><a href="#_'+this._event.datetime.utc().unix()+'">'+this._event.datetime.utc().unix()+"</a></div>")),t.append($('<h1><a href="'+this._event.url+'">'+this._event.title+"</a></h1>")),new Countdown_1.default(this._event.datetime,"starts ").appendTo(t),t.append($('<div class="description markdown">'+this._event.description+"</div>"))},e}();exports.default=FutureEvent;
+},{"jquery":1}],16:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ComponentsList_1=require("./ComponentsList"),Countdown_1=require("./Countdown"),Div_1=require("./Div"),H1_1=require("./H1"),Href_1=require("./Href"),Text_1=require("./Text"),FutureEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){new Div_1.default(new ComponentsList_1.default([new Div_1.default(new Href_1.default("#_"+this._event.datetime.utc().unix(),new Text_1.default(""+this._event.datetime.utc().unix())),{class:"timestamp"}),new H1_1.default(new Href_1.default(""+this._event.url,new Text_1.default(""+this._event.title))),new Countdown_1.default(this._event.datetime,"starts "),new Div_1.default(new Text_1.default(""+this._event.description),{class:"description"})]),{class:"event",id:"_${this._event.datetime.utc().unix()}"}).appendTo(e)},e}();exports.default=FutureEvent;
 
-},{"./Countdown":8,"jquery":1}],15:[function(require,module,exports){
+},{"./ComponentsList":7,"./Countdown":9,"./Div":11,"./H1":17,"./Href":18,"./Text":22}],17:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Tag_1=require("./Tag"),H1=function(){function t(t,e){this._body=t,this._attrs=e}return t.prototype.appendTo=function(t){new Tag_1.default("h1",this._body,this._attrs).appendTo(t)},t}();exports.default=H1;
+
+},{"./Tag":21}],18:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Tag_1=require("./Tag"),H1=function(){function t(t,e,r){this._url=t,this._body=e,this._attrs=r}return t.prototype.appendTo=function(t){new Tag_1.default("a",this._body,Object.assign({href:this._url},this._attrs)).appendTo(t)},t}();exports.default=H1;
+
+},{"./Tag":21}],19:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),Countdown_1=require("./Countdown"),PastEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){var t=$('<div id="_'+this._event.datetime.utc().unix()+'" class="past event">');e.append(t),t.append($('<div class="timestamp"><a href="#_'+this._event.datetime.utc().unix()+'">'+this._event.datetime.utc().unix()+"</a></div>")),t.append($('<h1><a href="'+this._event.url+'">'+this._event.title+"</a></h1>")),new Countdown_1.default(this._event.datetime,"finished ").appendTo(t),t.append($('<div class="description markdown">'+this._event.description+"</div>"))},e}();exports.default=PastEvent;
 
-},{"./Countdown":8,"jquery":1}],16:[function(require,module,exports){
+},{"./Countdown":9,"jquery":1}],20:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var StateFromUrl=function(){function t(t){this._url=t}return t.prototype.asPromise=function(){return fetch(this._url).then(function(t){return t.json()})},t}();exports.default=StateFromUrl;
 
-},{}],17:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),Tag=function(){function t(t,e,r){this._name=t,this._body=e,this._attrs=r}return t.prototype.appendTo=function(t){var e=$("<"+this._name+">");this._body&&this._body.appendTo(e),this._attrs&&e.attr(this._attrs),t.append(e)},t}();exports.default=Tag;
+
+},{"jquery":1}],22:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Text=function(){function t(t){this._text=t}return t.prototype.appendTo=function(t){t.text(this._text)},t}();exports.default=Text;
+
+},{}],23:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var $=require("jquery"),EventsForCurrentPeriod_1=require("./EventsForCurrentPeriod"),FailedScheduleLoad_1=require("./FailedScheduleLoad"),StateFromUrl_1=require("./StateFromUrl");new StateFromUrl_1.default("https://tsoding.github.io/api/schedule.json").asPromise().then(function(e){return new EventsForCurrentPeriod_1.default(e)},function(){return new FailedScheduleLoad_1.default}).then(function(e){return e.appendTo($("#root"))});
 
-},{"./EventsForCurrentPeriod":11,"./FailedScheduleLoad":13,"./StateFromUrl":16,"jquery":1,"moment-timezone":3}]},{},[17]);
+},{"./EventsForCurrentPeriod":13,"./FailedScheduleLoad":15,"./StateFromUrl":20,"jquery":1,"moment-timezone":3}]},{},[23]);
