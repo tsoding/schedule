@@ -6,6 +6,7 @@ import EventsForDay from './EventsForDay'
 import UiComponent from './UiComponent';
 import ConcatLists from './ConcatLists';
 
+// TODO: EventsForCurrentPeriod doesn't use HTML components
 export default class EventsForCurrentPeriod implements UiComponent {
     constructor(private _state: dto.State) {
     }
