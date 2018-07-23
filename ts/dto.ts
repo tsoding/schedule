@@ -8,7 +8,7 @@ export interface State {
     cancelledEvents: Array<number>
 }
 
-// TODO: dto.Project should be called dto.RecurringEvent
+// TODO(#70): dto.Project should be called dto.RecurringEvent
 export interface Project {
     name: string,
     description: string,
