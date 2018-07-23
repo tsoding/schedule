@@ -6,7 +6,6 @@ import Countdown from './Countdown';
 import Div from './Div';
 import H1 from './H1';
 import Href from './Href';
-import Tag from './Tag';
 import Text from './Text';
 import UiComponent from './UiComponent';
 
@@ -33,7 +32,7 @@ export default class FutureEvent implements UiComponent {
                 new Countdown(this._event.datetime, "starts "),
                 new Div(
                     new Text(`${this._event.description}`),
-                    {"class": "description"}
+                    {"class": "description markdown"}
                 )
             ]),
             {"class": "event",
