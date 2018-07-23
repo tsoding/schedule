@@ -5,7 +5,7 @@ import Event from './Event'
 import UiComponent from './UiComponent';
 import List from './List';
 
-// TODO: EventsForDay can be a concatenation of RecurringEventsForDay and ScheduledEventsForDay objects
+// TODO(#69): EventsForDay can be a concatenation of RecurringEventsForDay and ScheduledEventsForDay objects
 export default class EventsForDay implements UiComponent, List<Event> {
     constructor(private _state: dto.State,
                 private _date: string) {
