@@ -3,7 +3,7 @@ import * as dto from './dto';
 import UiComponent from './UiComponent';
 import Countdown from './Countdown';
 
-// TODO: CancelledEvent doesn't use HTML components
+// TODO(#62): CancelledEvent doesn't use HTML components
 export default class CancelledEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
