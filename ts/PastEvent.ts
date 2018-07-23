@@ -4,7 +4,7 @@ import * as moment from 'moment';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
 
-// TODO: PastEvents doesn't use HTML components
+// TODO(#66): PastEvents doesn't use HTML components
 export default class PastEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
