@@ -1,28 +1,54 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
 import * as moment from 'moment';
+import ComponentsList from './ComponentsList';
 import Countdown from './Countdown';
+import Div from './Div';
+import Empty from './Empty';
+import H1 from './H1';
+import Href from './Href';
+import Tag from './Tag'
+import Text from './Text';
 import UiComponent from './UiComponent';
 
-// TODO(#63): CurrentEvent doesn't use HTML components
 export default class CurrentEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        let element = $(`<div id="_${this._event.datetime.utc().unix()}" class="current event">`);
-        entry.append(element);
-
-        element.append($(`<div class="timestamp">
-                            <a href="#_${this._event.datetime.utc().unix()}">${this._event.datetime.utc().unix()}</a>
-                          </div>`));
-        element.append($(`<div class="watch">
-                            <a href="https://twitch.tv/tsoding">
-                              <i class="watch fas fa-external-link-alt fa-lg"></i>
-                            </a>
-                          </div>`));
-        element.append($(`<h1><a href="${this._event.url}">${this._event.title}</a></h1>`));
-        new Countdown(this._event.datetime, "started ").appendTo(element);
-        element.append($(`<div class="description markdown">${this._event.description}</div>`));
+        new Div(
+            new ComponentsList([
+                new Div(
+                    new Href(
+                        `#_${this._event.datetime.utc().unix()}`,
+                        new Text(`${this._event.datetime.utc().unix()}`)
+                    ),
+                    {"class": "timestamp"}
+                ),
+                new Div(
+                    new Href(
+                        "https://twitch.tv/tsoding",
+                        new Tag(
+                            "i",
+                            new Empty(),
+                            {"class": "watch fas fa-external-link-alt fa-lg"}
+                        )
+                    ),
+                    {"class": "watch"}
+                ),
+                new H1(
+                    new Href(
+                        `${this._event.url}`,
+                        new Text(`${this._event.title}`)
+                    ),
+                ),
+                new Countdown(this._event.datetime, "started "),
+                new Div(new Text(`${this._event.description}`), {"class": "description markdown"})
+            ]),
+            {
+                "id": `_${this._event.datetime.utc().unix()}`,
+                "class": "current event"
+            }
+        ).appendTo(entry);
     }
 }
