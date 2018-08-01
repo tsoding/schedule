@@ -90,21 +90,9 @@ strong {
 .header h1 {
   font-size: 60px;
 }
-.header .old-schedule a {
+.header .subheader a {
   font-size: 15px;
   border-bottom: 1px solid;
-}
-.header .beta {
-  color: #e4e4ef;
-  background: #f43841;
-  padding: 4px;
-  border-radius: 10px;
-  font-size: 13px;
-  position: relative;
-  width: 30px;
-  left: 445px;
-  top: -75px;
-  transform: rotate(30deg);
 }
 
 .markdown p {
