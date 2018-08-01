@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/tsoding/schedule-beta.svg?branch=master)](https://travis-ci.org/tsoding/schedule-beta)
+[![Build Status](https://travis-ci.org/tsoding/schedule.svg?branch=master)](https://travis-ci.org/tsoding/schedule)
 
 # Schedule for Tsoding Streams
 
 Schedule for Tsoding Streams. Front-End only Single Page Application without any Back-End. Makes all of the schedule building work yours computer problem. Saves me money on hosting.
 
-Deployed in https://tsoding.github.io/schedule-beta/
+Deployed in https://tsoding.github.io/schedule/
 
 ## Prerequisites
 
