@@ -7,6 +7,7 @@ import Div from './Div';
 import Event from './Event';
 import EventsForDay from './EventsForDay'
 import FilteredList from './FilteredList';
+import ListOfNumbersRange from './ListOfNumbersRange';
 import SlicedList from './SlicedList';
 import UiComponent from './UiComponent';
 
