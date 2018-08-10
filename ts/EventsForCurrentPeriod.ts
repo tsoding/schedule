@@ -5,6 +5,7 @@ import Event from './Event';
 import EventsForDay from './EventsForDay'
 import UiComponent from './UiComponent';
 import ConcatLists from './ConcatLists';
+import FilteredList from './FilteredList';
 
 // TODO(#64): EventsForCurrentPeriod doesn't use HTML components
 export default class EventsForCurrentPeriod implements UiComponent {
