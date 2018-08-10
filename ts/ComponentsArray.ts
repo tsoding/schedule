@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import UiComponent from './UiComponent';
 
-export default class ComponentsList implements UiComponent {
+export default class ComponentsArray implements UiComponent {
     constructor(private _components: UiComponent[]) {
     }
 
