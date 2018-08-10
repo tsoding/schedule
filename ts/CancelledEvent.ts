@@ -1,22 +1,46 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
-import UiComponent from './UiComponent';
+import * as moment from 'moment';
+import ComponentsList from './ComponentsList';
 import Countdown from './Countdown';
+import Div from './Div';
+import H1 from './H1';
+import Href from './Href';
+import Text from './Text';
+import UiComponent from './UiComponent';
 
-// TODO(#62): CancelledEvent doesn't use HTML components
 export default class CancelledEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        let element = $(`<div id="_${this._event.datetime.utc().unix()}" class="past event">`);
-        entry.append(element);
-
-
-        element.append($(`<div class="timestamp"><a href="#_${this._event.datetime.utc().unix()}">${this._event.datetime.utc().unix()}</a></div>`));
-        element.append($(`<h1><a href="${this._event.url}">${this._event.title}</a></h1>`));
-        new Countdown(this._event.datetime, "should've started ").appendTo(element);
-        element.append($(`<div class="description markdown">${this._event.description}</div>`));
-        element.append($(`<div class="cancelled-stamp">CANCELLED</div>`));
+        new Div(
+            new ComponentsList([
+                new Div(
+                    new Href(
+                        `#_${this._event.datetime.utc().unix()}`,
+                        new Text(`${this._event.datetime.utc().unix()}`)
+                    ),
+                    {"class": "timestamp"}
+                ),
+                new H1(
+                    new Href(
+                        `${this._event.url}`,
+                        new Text(`${this._event.title}`)
+                    )
+                ),
+                new Countdown(this._event.datetime, "should've started "),
+                new Div(
+                    new Text(`${this._event.description}`),
+                    {"class": "description markdown"}
+                ),
+                new Div(
+                    new Text('CANCELLED'),
+                    {"class": "cancelled-stamp"}
+                )
+            ]),
+            {"class": "past event",
+             "id": `_${this._event.datetime.utc().unix()}`}
+        ).appendTo(entry)
     }
 }
