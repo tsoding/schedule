@@ -36,7 +36,7 @@ export default class FutureEvent implements UiComponent {
                 )
             ]),
             {"class": "event",
-             "id": "_${this._event.datetime.utc().unix()}"}
+             "id": `_${this._event.datetime.utc().unix()}`}
         ).appendTo(entry);
     }
 }
