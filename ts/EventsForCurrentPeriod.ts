@@ -8,6 +8,7 @@ import Event from './Event';
 import EventsForDay from './EventsForDay'
 import FilteredList from './FilteredList';
 import ListOfNumbersRange from './ListOfNumbersRange';
+import MappedList from './MappedList';
 import SlicedList from './SlicedList';
 import UiComponent from './UiComponent';
 
@@ -19,13 +20,13 @@ export default class EventsForCurrentPeriod implements UiComponent {
         let day = moment().clone().utc().startOf('day').subtract(2, 'days')
 
         let events = new ConcatLists(
-            Array.from(
-                new Array(16),
+            new MappedList(
+                new ListOfNumbersRange(1, 16),
                 (_, i) => new EventsForDay(
                     this._state,
                     day.clone().add(i, 'days').format("YYYY-MM-DD"),
                 )
-            )
+            ).asArray()
         );
 
         new Div(
