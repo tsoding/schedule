@@ -36,7 +36,7 @@ export default class PastEvent implements UiComponent {
                 )
             ]),
             {"class": "event past",
-             "id": "_${this._event.datetime.utc().unix()}"}
+             "id": `_${this._event.datetime.utc().unix()}`}
         ).appendTo(entry)
     }
 }
