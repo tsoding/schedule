@@ -1,39 +1,42 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
 import * as moment from 'moment';
+import ComponentsList from './ComponentsList';
+import ConcatLists from './ConcatLists';
+import Div from './Div';
 import Event from './Event';
 import EventsForDay from './EventsForDay'
+import FilteredList from './FilteredList';
+import ListOfNumbersRange from './ListOfNumbersRange';
+import MappedList from './MappedList';
+import SlicedList from './SlicedList';
 import UiComponent from './UiComponent';
-import ConcatLists from './ConcatLists';
 
-// TODO(#64): EventsForCurrentPeriod doesn't use HTML components
 export default class EventsForCurrentPeriod implements UiComponent {
     constructor(private _state: dto.State) {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        let element = $('<div class="events">');
         let day = moment().clone().utc().startOf('day').subtract(2, 'days')
 
         let events = new ConcatLists(
-            Array.from(
-                new Array(16),
+            new MappedList(
+                new ListOfNumbersRange(1, 16),
                 (_, i) => new EventsForDay(
                     this._state,
                     day.clone().add(i, 'days').format("YYYY-MM-DD"),
                 )
-            )
-        ).asArray();
+            ).asArray()
+        );
 
-        events
-            .filter((e) => e.isPast())
-            .slice(-2)
-            .forEach((e) => e.appendTo(element));
-
-        events
-            .filter((e) => !e.isPast())
-            .forEach((e) => e.appendTo(element));
-
-        entry.append(element);
+        new Div(
+            new ComponentsList(
+                new ConcatLists([
+                    new SlicedList(new FilteredList(events, (e) => e.isPast()), -2),
+                    new FilteredList(events, (e) => !e.isPast())
+                ])
+            ),
+            {"class": "events"}
+        ).appendTo(entry)
     }
 }

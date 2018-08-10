@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
 import * as moment from 'moment';
-import ComponentsList from './ComponentsList';
+import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
 import Div from './Div';
 import H1 from './H1';
@@ -15,7 +15,7 @@ export default class FutureEvent implements UiComponent {
 
     appendTo(entry: JQuery<HTMLElement>): void {
         new Div(
-            new ComponentsList([
+            new ComponentsArray([
                 new Div(
                     new Href(
                         `#_${this._event.datetime.utc().unix()}`,
