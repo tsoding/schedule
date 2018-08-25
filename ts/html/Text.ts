@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import UiComponent from './UiComponent';
+import UiComponent from '../UiComponent';
 
 export default class Text implements UiComponent {
     constructor(private _text: string) {

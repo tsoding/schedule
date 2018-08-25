@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import UiComponent from './UiComponent';
+import UiComponent from '../UiComponent';
 
 export default class Tag implements UiComponent {
     constructor(private _name: string,

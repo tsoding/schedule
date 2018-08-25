@@ -1,9 +1,8 @@
 import 'moment-timezone';
 import * as $ from 'jquery';
+import * as html from './html';
 import * as moment from 'moment';
 import UiComponent from './UiComponent';
-import Div from './Div';
-import Text from './Text';
 
 export default class Countdown implements UiComponent {
     constructor(private _datetime: moment.Moment,
@@ -11,8 +10,8 @@ export default class Countdown implements UiComponent {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        new Div(
-            new Text(
+        new html.Div(
+            new html.Text(
                 `${this._datetime.tz(moment.tz.guess()).format('llll')} \
                  (${this._prefix}${this._datetime.fromNow()})`
             ),

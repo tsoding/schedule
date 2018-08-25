@@ -1,14 +1,9 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
+import * as html from './html';
 import * as moment from 'moment';
 import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
-import Div from './Div';
-import Empty from './Empty';
-import H1 from './H1';
-import Href from './Href';
-import Tag from './Tag'
-import Text from './Text';
 import UiComponent from './UiComponent';
 
 export default class CurrentEvent implements UiComponent {
@@ -16,34 +11,34 @@ export default class CurrentEvent implements UiComponent {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        new Div(
+        new html.Div(
             new ComponentsArray([
-                new Div(
-                    new Href(
+                new html.Div(
+                    new html.Href(
                         `#_${this._event.datetime.utc().unix()}`,
-                        new Text(`${this._event.datetime.utc().unix()}`)
+                        new html.Text(`${this._event.datetime.utc().unix()}`)
                     ),
                     {"class": "timestamp"}
                 ),
-                new Div(
-                    new Href(
+                new html.Div(
+                    new html.Href(
                         "https://twitch.tv/tsoding",
-                        new Tag(
+                        new html.Tag(
                             "i",
-                            new Empty(),
+                            new html.Empty(),
                             {"class": "watch fas fa-external-link-alt fa-lg"}
                         )
                     ),
                     {"class": "watch"}
                 ),
-                new H1(
-                    new Href(
+                new html.H1(
+                    new html.Href(
                         `${this._event.url}`,
-                        new Text(`${this._event.title}`)
+                        new html.Text(`${this._event.title}`)
                     ),
                 ),
                 new Countdown(this._event.datetime, "started "),
-                new Div(new Text(`${this._event.description}`), {"class": "description markdown"})
+                new html.Div(new html.Text(`${this._event.description}`), {"class": "description markdown"})
             ]),
             {
                 "id": `_${this._event.datetime.utc().unix()}`,

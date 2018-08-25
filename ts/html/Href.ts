@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import UiComponent from './UiComponent';
+import UiComponent from '../UiComponent';
 import Tag from './Tag';
 
 export default class H1 implements UiComponent {
