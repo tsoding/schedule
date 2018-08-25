@@ -1,9 +1,9 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
+import * as html from './html';
 import * as list from './list';
 import * as moment from 'moment';
 import ComponentsList from './ComponentsList';
-import Div from './Div';
 import Event from './Event';
 import EventsForDay from './EventsForDay'
 import UiComponent from './UiComponent';
@@ -25,7 +25,7 @@ export default class EventsForCurrentPeriod implements UiComponent {
             ).asArray()
         );
 
-        new Div(
+        new html.Div(
             new ComponentsList(
                 new list.ConcatLists([
                     new list.SlicedList(new list.FilteredList(events, (e) => e.isPast()), -2),

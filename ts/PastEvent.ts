@@ -1,12 +1,9 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
+import * as html from './html';
 import * as moment from 'moment';
 import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
-import Div from './Div';
-import H1 from './H1';
-import Href from './Href';
-import Text from './Text';
 import UiComponent from './UiComponent';
 
 export default class PastEvent implements UiComponent {
@@ -14,24 +11,24 @@ export default class PastEvent implements UiComponent {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
-        new Div(
+        new html.Div(
             new ComponentsArray([
-                new Div(
-                    new Href(
+                new html.Div(
+                    new html.Href(
                         `#_${this._event.datetime.utc().unix()}`,
-                        new Text(`${this._event.datetime.utc().unix()}`)
+                        new html.Text(`${this._event.datetime.utc().unix()}`)
                     ),
                     {"class": "timestamp"}
                 ),
-                new H1(
-                    new Href(
+                new html.H1(
+                    new html.Href(
                         `${this._event.url}`,
-                        new Text(`${this._event.title}`)
+                        new html.Text(`${this._event.title}`)
                     )
                 ),
                 new Countdown(this._event.datetime, "finished "),
-                new Div(
-                    new Text(`${this._event.description}`),
+                new html.Div(
+                    new html.Text(`${this._event.description}`),
                     {"class": "description markdown"}
                 )
             ]),
