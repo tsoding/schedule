@@ -1,12 +1,12 @@
 import * as $ from 'jquery';
 import * as dto from './dto';
+import * as list from './list';
 import * as moment from 'moment';
 import Event from './Event'
 import UiComponent from './UiComponent';
-import List from './List';
 
 // TODO(#69): EventsForDay can be a concatenation of RecurringEventsForDay and ScheduledEventsForDay objects
-export default class EventsForDay implements UiComponent, List<Event> {
+export default class EventsForDay implements UiComponent, list.List<Event> {
     constructor(private _state: dto.State,
                 private _date: string) {
     }

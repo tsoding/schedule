@@ -1,10 +1,10 @@
 import * as $ from 'jquery';
+import * as list from './list';
 import ComponentsArray from './ComponentsArray'
-import List from './List';
 import UiComponent from './UiComponent';
 
 export default class ComponentsList implements UiComponent {
-    constructor(private _componentsList: List<UiComponent>) {
+    constructor(private _componentsList: list.List<UiComponent>) {
     }
 
     appendTo(entry: JQuery<HTMLElement>): void {
