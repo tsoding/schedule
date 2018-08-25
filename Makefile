@@ -1,4 +1,4 @@
-TSS=$(wildcard ts/*.ts)
+TSS=$(shell find ./ts/ -type f -name '*.ts')
 BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
 SASS=./node_modules/.bin/sass
