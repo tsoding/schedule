@@ -1,9 +1,11 @@
 import Project from './Project';
 import ExtraEvent from './ExtraEvent';
+import EventPatch from './EventPatch';
 
 export default interface State {
     projects: Array<Project>,
     timezone: string,
     extraEvents: Array<ExtraEvent>,
-    cancelledEvents: Array<number>
+    cancelledEvents: Array<number>,
+    eventPatches?: Array<EventPatch>
 }
