@@ -613,7 +613,7 @@ var moment=module.exports=require("./moment-timezone");moment.tz.load(require(".
 },{}],6:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),ComponentsArray_1=require("./ComponentsArray"),Countdown_1=require("./Countdown"),CancelledEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){new html.Div(new ComponentsArray_1.default([new html.Div(new html.Href("#_"+this._event.datetime.utc().unix(),new html.Text(""+this._event.datetime.utc().unix())),{class:"timestamp"}),new html.H1(new html.Href(""+this._event.url,new html.Text(""+this._event.title))),new Countdown_1.default(this._event.datetime,"should've started "),new html.Div(new html.Text(""+this._event.description),{class:"description markdown"}),new html.Div(new html.Text("CANCELLED"),{class:"cancelled-stamp"})]),{class:"past event",id:"_"+this._event.datetime.utc().unix()}).appendTo(e)},e}();exports.default=CancelledEvent;
 
-},{"./ComponentsArray":7,"./Countdown":9,"./html":25}],7:[function(require,module,exports){
+},{"./ComponentsArray":7,"./Countdown":9,"./html":27}],7:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ComponentsArray=function(){function n(n){this._components=n}return n.prototype.appendTo=function(n){this._components.forEach(function(o){return o.appendTo(n)})},n}();exports.default=ComponentsArray;
 
 },{}],8:[function(require,module,exports){
@@ -622,70 +622,76 @@ var moment=module.exports=require("./moment-timezone");moment.tz.load(require(".
 },{"./ComponentsArray":7}],9:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var html=require("./html"),moment=require("moment"),Countdown=function(){function t(t,e){this._datetime=t,this._prefix=e}return t.prototype.appendTo=function(t){new html.Div(new html.Text(this._datetime.tz(moment.tz.guess()).format("llll")+"                  ("+this._prefix+this._datetime.fromNow()+")"),{class:"countdown"}).appendTo(t)},t}();exports.default=Countdown;
 
-},{"./html":25,"moment":5,"moment-timezone":3}],10:[function(require,module,exports){
+},{"./html":27,"moment":5,"moment-timezone":3}],10:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),ComponentsArray_1=require("./ComponentsArray"),Countdown_1=require("./Countdown"),CurrentEvent=function(){function t(t){this._event=t}return t.prototype.appendTo=function(t){new html.Div(new ComponentsArray_1.default([new html.Div(new html.Href("#_"+this._event.datetime.utc().unix(),new html.Text(""+this._event.datetime.utc().unix())),{class:"timestamp"}),new html.Div(new html.Href("https://twitch.tv/tsoding",new html.Tag("i",new html.Empty,{class:"watch fas fa-external-link-alt fa-lg"})),{class:"watch"}),new html.H1(new html.Href(""+this._event.url,new html.Text(""+this._event.title))),new Countdown_1.default(this._event.datetime,"started "),new html.Div(new html.Text(""+this._event.description),{class:"description markdown"})]),{id:"_"+this._event.datetime.utc().unix(),class:"current event"}).appendTo(t)},t}();exports.default=CurrentEvent;
 
-},{"./ComponentsArray":7,"./Countdown":9,"./html":25}],11:[function(require,module,exports){
+},{"./ComponentsArray":7,"./Countdown":9,"./html":27}],11:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var moment=require("moment"),CancelledEvent_1=require("./CancelledEvent"),CurrentEvent_1=require("./CurrentEvent"),FutureEvent_1=require("./FutureEvent"),PastEvent_1=require("./PastEvent"),Event=function(){function e(e,t){this._event=e,this._canceldEvents=t}return e.prototype.appendTo=function(e){var t=moment().diff(this._event.datetime,"seconds");this.isCancelled()?new CancelledEvent_1.default(this._event).appendTo(e):0<=t&&t<14400?new CurrentEvent_1.default(this._event).appendTo(e):t>=14400?new PastEvent_1.default(this._event).appendTo(e):new FutureEvent_1.default(this._event).appendTo(e)},e.prototype.isPast=function(){return this.isCancelled()?moment().diff(this._event.datetime,"seconds")>0:moment().diff(this._event.datetime,"seconds")>=14400},e.prototype.isCancelled=function(){var e=this;return this._canceldEvents.findIndex(function(t){return t==e._event.datetime.unix()})>=0},e}();exports.default=Event;
 
 },{"./CancelledEvent":6,"./CurrentEvent":10,"./FutureEvent":15,"./PastEvent":16,"moment":5}],12:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),list=require("./list"),moment=require("moment"),ComponentsList_1=require("./ComponentsList"),EventsForDay_1=require("./EventsForDay"),EventsForCurrentPeriod=function(){function t(t){this._state=t}return t.prototype.appendTo=function(t){var e=this,n=moment().clone().utc().startOf("day").subtract(2,"days"),s=new list.ConcatLists(new list.MappedList(new list.ListOfNumbersRange(1,16),function(t,s){return new EventsForDay_1.default(e._state,n.clone().add(s,"days").format("YYYY-MM-DD"))}).asArray());new html.Div(new ComponentsList_1.default(new list.ConcatLists([new list.SlicedList(new list.FilteredList(s,function(t){return t.isPast()}),-2),new list.FilteredList(s,function(t){return!t.isPast()})])),{class:"events"}).appendTo(t)},t}();exports.default=EventsForCurrentPeriod;
 
-},{"./ComponentsList":8,"./EventsForDay":13,"./html":25,"./list":31,"moment":5}],13:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var moment=require("moment"),Event_1=require("./Event"),EventsForDay=function(){function t(t,e){this._state=t,this._date=e}return t.prototype.appendTo=function(t){this.asArray().forEach(function(e){return e.appendTo(t)})},t.prototype.asArray=function(){var t=this,e=moment.tz(this._date,this._state.timezone).isoWeekday();return this._state.projects.filter(function(e){var n=moment.tz(""+t._date,t._state.timezone).utc().unix(),r=e.starts?moment.tz(""+e.starts,t._state.timezone).utc().unix():0,i=e.ends?moment.tz(""+e.ends,t._state.timezone).utc().unix():Number.MAX_SAFE_INTEGER;return r<=n&&n<=i}).filter(function(t){return t.days.includes(e)}).map(function(e){return new Event_1.default({datetime:moment.tz(t._date+" "+e.time,t._state.timezone).utc(),title:e.name,description:e.description,url:e.url},t._state.cancelledEvents)}).concat(this._state.extraEvents.filter(function(e){return e.date==t._date}).map(function(e){return new Event_1.default({datetime:moment.tz(t._date+" "+e.time,t._state.timezone).utc(),title:e.title,description:e.description,url:e.url},t._state.cancelledEvents)}))},t}();exports.default=EventsForDay;
+},{"./ComponentsList":8,"./EventsForDay":13,"./html":27,"./list":33,"moment":5}],13:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var dto=require("./dto"),moment=require("moment"),Event_1=require("./Event"),EventsForDay=function(){function t(t,e){this._state=t,this._date=e}return t.prototype.appendTo=function(t){this.asArray().forEach(function(e){return e.appendTo(t)})},t.prototype.asArray=function(){var t=this,e=moment.tz(this._date,this._state.timezone).isoWeekday();return this._state.projects.filter(function(e){var n=moment.tz(""+t._date,t._state.timezone).utc().unix(),r=e.starts?moment.tz(""+e.starts,t._state.timezone).utc().unix():0,i=e.ends?moment.tz(""+e.ends,t._state.timezone).utc().unix():Number.MAX_SAFE_INTEGER;return r<=n&&n<=i}).filter(function(t){return t.days.includes(e)}).map(function(e){return{datetime:moment.tz(t._date+" "+e.time,t._state.timezone).utc(),title:e.name,description:e.description,url:e.url}}).concat(this._state.extraEvents.filter(function(e){return e.date==t._date}).map(function(e){return{datetime:moment.tz(t._date+" "+e.time,t._state.timezone).utc(),title:e.title,description:e.description,url:e.url}})).map(function(e){return new Event_1.default(t._state.eventPatches?new dto.PatchedEvent(e,t._state.eventPatches[e.datetime.utc().unix()]):e,t._state.cancelledEvents)})},t}();exports.default=EventsForDay;
 
-},{"./Event":11,"moment":5}],14:[function(require,module,exports){
+},{"./Event":11,"./dto":20,"moment":5}],14:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),FailedScheduleLoad=function(){function e(){}return e.prototype.appendTo=function(e){new html.Div(new html.Text("Failed to load schedule data. Keep refreshing.")).appendTo(e)},e}();exports.default=FailedScheduleLoad;
 
-},{"./html":25}],15:[function(require,module,exports){
+},{"./html":27}],15:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),ComponentsArray_1=require("./ComponentsArray"),Countdown_1=require("./Countdown"),FutureEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){new html.Div(new ComponentsArray_1.default([new html.Div(new html.Href("#_"+this._event.datetime.utc().unix(),new html.Text(""+this._event.datetime.utc().unix())),{class:"timestamp"}),new html.H1(new html.Href(""+this._event.url,new html.Text(""+this._event.title))),new Countdown_1.default(this._event.datetime,"starts "),new html.Div(new html.Text(""+this._event.description),{class:"description markdown"})]),{class:"event",id:"_"+this._event.datetime.utc().unix()}).appendTo(e)},e}();exports.default=FutureEvent;
 
-},{"./ComponentsArray":7,"./Countdown":9,"./html":25}],16:[function(require,module,exports){
+},{"./ComponentsArray":7,"./Countdown":9,"./html":27}],16:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),ComponentsArray_1=require("./ComponentsArray"),Countdown_1=require("./Countdown"),PastEvent=function(){function e(e){this._event=e}return e.prototype.appendTo=function(e){new html.Div(new ComponentsArray_1.default([new html.Div(new html.Href("#_"+this._event.datetime.utc().unix(),new html.Text(""+this._event.datetime.utc().unix())),{class:"timestamp"}),new html.H1(new html.Href(""+this._event.url,new html.Text(""+this._event.title))),new Countdown_1.default(this._event.datetime,"finished "),new html.Div(new html.Text(""+this._event.description),{class:"description markdown"})]),{class:"event past",id:"_"+this._event.datetime.utc().unix()}).appendTo(e)},e}();exports.default=PastEvent;
 
-},{"./ComponentsArray":7,"./Countdown":9,"./html":25}],17:[function(require,module,exports){
+},{"./ComponentsArray":7,"./Countdown":9,"./html":27}],17:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var StateFromUrl=function(){function t(t){this._url=t}return t.prototype.asPromise=function(){return fetch(this._url).then(function(t){return t.json()})},t}();exports.default=StateFromUrl;
 
 },{}],18:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var $=require("jquery"),EventsForCurrentPeriod_1=require("./EventsForCurrentPeriod"),FailedScheduleLoad_1=require("./FailedScheduleLoad"),StateFromUrl_1=require("./StateFromUrl");new StateFromUrl_1.default("https://tsoding.github.io/api/schedule.json").asPromise().then(function(e){return new EventsForCurrentPeriod_1.default(e)},function(){return new FailedScheduleLoad_1.default}).then(function(e){return e.appendTo($("#root"))});
 
 },{"./EventsForCurrentPeriod":12,"./FailedScheduleLoad":14,"./StateFromUrl":17,"jquery":1,"moment-timezone":3}],19:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var PatchedEvent=function(){return function(t,e){this.datetime=t.datetime,this.title=t.title,this.description=t.description,this.url=t.url,e&&(e.title&&(this.title=e.title),e.description&&(this.description=e.description),e.url&&(this.url=e.url))}}();exports.default=PatchedEvent;
+
+},{}],20:[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var PatchedEvent_1=require("./PatchedEvent");exports.PatchedEvent=PatchedEvent_1.default;
+
+},{"./PatchedEvent":19}],21:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Tag_1=require("./Tag"),Div=function(){function t(t,e){this._body=t,this._attrs=e}return t.prototype.appendTo=function(t){new Tag_1.default("div",this._body,this._attrs).appendTo(t)},t}();exports.default=Div;
 
-},{"./Tag":23}],20:[function(require,module,exports){
+},{"./Tag":25}],22:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Empty=function(){function t(){}return t.prototype.appendTo=function(t){},t}();exports.default=Empty;
 
-},{}],21:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Tag_1=require("./Tag"),H1=function(){function t(t,e){this._body=t,this._attrs=e}return t.prototype.appendTo=function(t){new Tag_1.default("h1",this._body,this._attrs).appendTo(t)},t}();exports.default=H1;
 
-},{"./Tag":23}],22:[function(require,module,exports){
+},{"./Tag":25}],24:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Tag_1=require("./Tag"),H1=function(){function t(t,e,r){this._url=t,this._body=e,this._attrs=r}return t.prototype.appendTo=function(t){new Tag_1.default("a",this._body,Object.assign({href:this._url},this._attrs)).appendTo(t)},t}();exports.default=H1;
 
-},{"./Tag":23}],23:[function(require,module,exports){
+},{"./Tag":25}],25:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var $=require("jquery"),Tag=function(){function t(t,e,r){this._name=t,this._body=e,this._attrs=r}return t.prototype.appendTo=function(t){var e=$("<"+this._name+">");this._body&&this._body.appendTo(e),this._attrs&&e.attr(this._attrs),t.append(e)},t}();exports.default=Tag;
 
-},{"jquery":1}],24:[function(require,module,exports){
+},{"jquery":1}],26:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Text=function(){function t(t){this._text=t}return t.prototype.appendTo=function(t){t.text(this._text)},t}();exports.default=Text;
 
-},{}],25:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var Div_1=require("./Div");exports.Div=Div_1.default;var Empty_1=require("./Empty");exports.Empty=Empty_1.default;var H1_1=require("./H1");exports.H1=H1_1.default;var Href_1=require("./Href");exports.Href=Href_1.default;var Tag_1=require("./Tag");exports.Tag=Tag_1.default;var Text_1=require("./Text");exports.Text=Text_1.default;
 
-},{"./Div":19,"./Empty":20,"./H1":21,"./Href":22,"./Tag":23,"./Text":24}],26:[function(require,module,exports){
+},{"./Div":21,"./Empty":22,"./H1":23,"./Href":24,"./Tag":25,"./Text":26}],28:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ConcatLists=function(){function t(t){this._input=t}return t.prototype.asArray=function(){var t=[];return this._input.forEach(function(r){t=t.concat(r.asArray())}),t},t}();exports.default=ConcatLists;
 
-},{}],27:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var FilteredList=function(){function t(t,e){this._input=t,this._predicate=e}return t.prototype.asArray=function(){return this._input.asArray().filter(this._predicate)},t}();exports.default=FilteredList;
 
-},{}],28:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ListOfNumbersRange=function(){function t(t,e){this._low=t,this._high=e}return t.prototype.asArray=function(){for(var t=[],e=this._low;e<=this._high;++e)t.push(e);return t},t}();exports.default=ListOfNumbersRange;
 
-},{}],29:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var MappedList=function(){function t(t,e){this._input=t,this._mapper=e}return t.prototype.asArray=function(){return this._input.asArray().map(this._mapper)},t}();exports.default=MappedList;
 
-},{}],30:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var SlicedList=function(){function t(t,e,i){this._input=t,this.begin=e,this.end=i}return t.prototype.asArray=function(){return this._input.asArray().slice(this.begin,this.end)},t}();exports.default=SlicedList;
 
-},{}],31:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var ConcatLists_1=require("./ConcatLists");exports.ConcatLists=ConcatLists_1.default;var SlicedList_1=require("./SlicedList");exports.SlicedList=SlicedList_1.default;var FilteredList_1=require("./FilteredList");exports.FilteredList=FilteredList_1.default;var ListOfNumbersRange_1=require("./ListOfNumbersRange");exports.ListOfNumbersRange=ListOfNumbersRange_1.default;var MappedList_1=require("./MappedList");exports.MappedList=MappedList_1.default;
 
-},{"./ConcatLists":26,"./FilteredList":27,"./ListOfNumbersRange":28,"./MappedList":29,"./SlicedList":30}]},{},[18]);
+},{"./ConcatLists":28,"./FilteredList":29,"./ListOfNumbersRange":30,"./MappedList":31,"./SlicedList":32}]},{},[18]);
