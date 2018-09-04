@@ -56,7 +56,12 @@ export default class EventsForDay implements UiComponent, list.List<Event> {
                     )
             )
             .map(
-                (e) => new Event(e, this._state.cancelledEvents)
+                (e) => new Event(
+                    this._state.eventPatches
+                        ? new dto.PatchedEvent(e, this._state.eventPatches[e.datetime.utc().unix()])
+                        : e,
+                    this._state.cancelledEvents
+                )
             )
     }
 }
