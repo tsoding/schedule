@@ -7,5 +7,5 @@ export default interface State {
     timezone: string,
     extraEvents: Array<ExtraEvent>,
     cancelledEvents: Array<number>,
-    eventPatches?: Array<EventPatch>
+    eventPatches?: { number : EventPatch }
 }
