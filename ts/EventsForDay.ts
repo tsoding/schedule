@@ -30,12 +30,14 @@ export default class EventsForDay implements UiComponent, list.List<Event> {
                 (p) => p.days.includes(weekday)
             )
             .map(
-                (p) => new Event({
-                    datetime: moment.tz(`${this._date} ${p.time}`, this._state.timezone).utc(),
-                    title: p.name,
-                    description: p.description,
-                    url: p.url
-                }, this._state.cancelledEvents)
+                (p) => {
+                    return {
+                        datetime: moment.tz(`${this._date} ${p.time}`, this._state.timezone).utc(),
+                        title: p.name,
+                        description: p.description,
+                        url: p.url
+                    };
+                }
             )
             .concat(
                 this._state.extraEvents
@@ -43,13 +45,23 @@ export default class EventsForDay implements UiComponent, list.List<Event> {
                         (ee) => ee.date == this._date
                     )
                     .map(
-                        (ee) => new Event({
-                            datetime: moment.tz(`${this._date} ${ee.time}`, this._state.timezone).utc(),
-                            title: ee.title,
-                            description: ee.description,
-                            url: ee.url
-                        }, this._state.cancelledEvents)
+                        (ee) => {
+                            return {
+                                datetime: moment.tz(`${this._date} ${ee.time}`, this._state.timezone).utc(),
+                                title: ee.title,
+                                description: ee.description,
+                                url: ee.url
+                            };
+                        }
                     )
+            )
+            .map(
+                (e) => new Event(
+                    this._state.eventPatches
+                        ? new dto.PatchedEvent(e, this._state.eventPatches[e.datetime.utc().unix()])
+                        : e,
+                    this._state.cancelledEvents
+                )
             )
     }
 }
