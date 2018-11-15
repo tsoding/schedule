@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import * as dto from './dto';
 import * as html from './html';
 import * as moment from 'moment';
@@ -10,7 +9,7 @@ export default class CancelledEvent implements UiComponent {
     constructor(private _event: dto.Event) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
+    appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new ComponentsArray([
                 new html.Div(

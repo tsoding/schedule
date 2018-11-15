@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import * as dto from './dto';
 import * as html from './html';
 import * as list from './list';
@@ -12,7 +11,7 @@ export default class EventsForCurrentPeriod implements UiComponent {
     constructor(private _state: dto.State) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
+    appendTo(entry: HTMLElement | null): void {
         let day = moment().clone().utc().startOf('day').subtract(2, 'days')
 
         let events = new list.ConcatLists(

@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import * as dto from './dto';
 import Weekday from './Weekday';
 

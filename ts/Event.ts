@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import * as dto from './dto';
 import * as moment from 'moment';
 import CancelledEvent from './CancelledEvent';
@@ -13,7 +12,7 @@ export default class Event implements UiComponent {
                 private _canceldEvents: Array<number>) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
+    appendTo(entry: HTMLElement | null): void {
         let secondsDiff = moment().diff(this._event.datetime, 'seconds');
 
         if (this.isCancelled()) {

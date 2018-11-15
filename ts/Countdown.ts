@@ -1,5 +1,4 @@
 import 'moment-timezone';
-import * as $ from 'jquery';
 import * as html from './html';
 import * as moment from 'moment';
 import UiComponent from './UiComponent';
@@ -9,7 +8,7 @@ export default class Countdown implements UiComponent {
                 private _prefix: string) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
+    appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new html.Text(
                 `${this._datetime.tz(moment.tz.guess()).format('llll')} \

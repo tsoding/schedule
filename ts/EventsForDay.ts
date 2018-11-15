@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import * as dto from './dto';
 import * as list from './list';
 import * as moment from 'moment';
@@ -11,7 +10,7 @@ export default class EventsForDay implements UiComponent, list.List<Event> {
                 private _date: string) {
     }
 
-    appendTo(entry: JQuery<HTMLElement>): void {
+    appendTo(entry: HTMLElement | null): void {
         this.asArray().forEach((e) => e.appendTo(entry))
     }
 

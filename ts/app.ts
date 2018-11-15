@@ -1,5 +1,4 @@
 import 'moment-timezone';
-import * as $ from 'jquery';
 import * as moment from 'moment';
 import Event from './Event';
 import EventsForCurrentPeriod from './EventsForCurrentPeriod';
@@ -13,4 +12,4 @@ new StateFromUrl('https://tsoding.github.io/api/schedule.json')
         (state) => new EventsForCurrentPeriod(state),
         () => new FailedScheduleLoad()
     )
-    .then((c) => c.appendTo($('#root')))
+    .then((c) => c.appendTo(document.getElementById('root')));
