@@ -12,11 +12,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@types/jquery": "^3.3.1",
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.6",
     "browserify": "^16.2.2",
-    "jquery": "^3.3.1",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.20",
     "sass": "^1.9.0",
