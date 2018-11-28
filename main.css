@@ -17,6 +17,10 @@ body {
 .event h1 {
   font-size: 25px;
   margin-bottom: 10px;
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .event .countdown {
   font-size: 15px;
