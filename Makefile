@@ -4,7 +4,7 @@ WATCHIFY=./node_modules/.bin/watchify
 SASS=./node_modules/.bin/sass
 
 .PHONY: all
-all: dist/app.js dist/index.html dist/reset.css dist/main.css
+all: dist/app.js dist/index.html dist/reset.css dist/main.css dist/schedule.json
 
 dist/app.js: dist $(TSS)
 	$(BROWSERIFY) ./ts/app.ts -p tsify -g uglifyify --outfile dist/app.js
@@ -18,11 +18,14 @@ dist/reset.css: dist css/reset.css
 dist/main.css: dist scss/main.scss
 	$(SASS) --no-source-map scss/main.scss dist/main.css
 
+dist/schedule.json: json/schedule.json
+	cp json/schedule.json dist/schedule.json
+
 dist:
 	mkdir -p dist
 
 .PHONY: watch
-watch: dist/reset.css watch-ts watch-scss watch-html
+watch: dist/schedule.json dist/reset.css watch-ts watch-scss watch-html
 
 .PHONY: watch-ts
 watch-ts: dist $(TSS)

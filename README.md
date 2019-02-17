@@ -13,13 +13,16 @@ Deployed in https://tsoding.github.io/schedule/
 - [bash]
 - [coreutils]
 - [inotifywatch]
+- [python]
 
 ## Quick Start
 
 ```console
 $ npm install
 $ make
-$ <browser> dist/index.html
+$ cd dist/
+$ python -m SimpleHTTPServer 8080
+$ <browser> http://localhost:8080/
 $ make -j3 watch                  # for watch mode
                                   # -j3 is required to run scss and ts watchers in parallel
 ```
@@ -30,3 +33,4 @@ $ make -j3 watch                  # for watch mode
 [bash]: https://www.gnu.org/software/bash/
 [coreutils]: https://www.gnu.org/software/coreutils/coreutils.html
 [inotifywatch]: https://github.com/rvoicilas/inotify-tools
+[python]: https://www.python.org/
