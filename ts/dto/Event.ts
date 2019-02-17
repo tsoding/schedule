@@ -5,4 +5,5 @@ export default interface Event {
     title: string,
     description: string,
     url: string,
+    channel: string,
 }

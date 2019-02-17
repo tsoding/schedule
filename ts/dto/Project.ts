@@ -7,6 +7,7 @@ export default interface Project {
     url: string,
     days: Array<Weekday>,
     time: string,
+    channel: string,
     starts?: string,
     ends?: string,
     comment?: string

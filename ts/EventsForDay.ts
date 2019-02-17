@@ -34,7 +34,8 @@ export default class EventsForDay implements UiComponent, list.List<Event> {
                         datetime: moment.tz(`${this._date} ${p.time}`, this._state.timezone).utc(),
                         title: p.name,
                         description: p.description,
-                        url: p.url
+                        url: p.url,
+                        channel: p.channel,
                     };
                 }
             )
@@ -49,7 +50,8 @@ export default class EventsForDay implements UiComponent, list.List<Event> {
                                 datetime: moment.tz(`${this._date} ${ee.time}`, this._state.timezone).utc(),
                                 title: ee.title,
                                 description: ee.description,
-                                url: ee.url
+                                url: ee.url,
+                                channel: ee.channel,
                             };
                         }
                     )

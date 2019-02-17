@@ -25,7 +25,13 @@ export default class FutureEvent implements UiComponent {
                         new html.Text(`${this._event.title}`)
                     )
                 ),
-                new Countdown(this._event.datetime, "starts "),
+                new Countdown(this._event.datetime, "Starts "),
+                new html.Div(
+                    new html.Href(
+                        this._event.channel,
+                        new html.Text(this._event.channel)),
+                    {"class": "channel"}
+                ),
                 new html.Div(
                     new html.Text(`${this._event.description}`),
                     {"class": "description markdown"}
