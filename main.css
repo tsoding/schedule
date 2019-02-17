@@ -23,6 +23,10 @@ body {
   text-align: center;
 }
 .event .countdown {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.event .channel {
   font-size: 15px;
 }
 .event .timestamp {
