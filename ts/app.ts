@@ -6,7 +6,7 @@ import FailedScheduleLoad from './FailedScheduleLoad'
 import StateFromUrl from './StateFromUrl'
 import Weekday from './Weekday'
 
-new StateFromUrl('https://tsoding.github.io/api/schedule.json')
+new StateFromUrl('schedule.json')
     .asPromise()
     .then(
         (state) => new EventsForCurrentPeriod(state),
