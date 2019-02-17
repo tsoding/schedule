@@ -11,8 +11,8 @@ export default class Countdown implements UiComponent {
     appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new html.Text(
-                `${this._datetime.tz(moment.tz.guess()).format('llll')} \
-                 (${this._prefix}${this._datetime.fromNow()})`
+                `${this._prefix}${this._datetime.fromNow()} \
+                 (${this._datetime.tz(moment.tz.guess()).format('llll')})`
             ),
             {"class": "countdown"}
         ).appendTo(entry)

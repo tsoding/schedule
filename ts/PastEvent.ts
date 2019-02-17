@@ -27,6 +27,12 @@ export default class PastEvent implements UiComponent {
                 ),
                 new Countdown(this._event.datetime, "finished "),
                 new html.Div(
+                    new html.Href(
+                        this._event.channel,
+                        new html.Text(this._event.channel)),
+                    {"class": "channel"}
+                ),
+                new html.Div(
                     new html.Text(`${this._event.description}`),
                     {"class": "description markdown"}
                 )
