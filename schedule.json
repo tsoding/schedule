@@ -5,7 +5,7 @@
             "description": "A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2",
             "url": "https://github.com/tsoding/nothing",
             "days": [6, 7],
-            "time": "22:00",
+            "time": "23:00",
             "channel": "https://twitch.tv/tsoding"
         },
         {
@@ -13,7 +13,7 @@
             "description": "Enhancing my Total Surveillance Automatic Ban Machine. Join to help to test it!",
             "url": "https://github.com/tsoding/HyperNerd",
             "days": [4],
-            "time": "22:00",
+            "time": "23:00",
             "channel": "https://twitch.tv/tsoding"
         },
         {
@@ -41,7 +41,7 @@
             "description": "Animation Framework for making animation for Tsoding YouTube channel",
             "url": "https://github.com/tsoding/multik",
             "days": [3],
-            "time": "22:00",
+            "time": "23:00",
             "starts": "2019-01-12",
             "channel": "https://twitch.tv/tsoding"
         },
@@ -69,7 +69,7 @@
             "url": "https://github.com/teeworlds/teeworlds",
             "description": "On the Real Open Source Contribution series we are trying to take an Open Source project that I personally use on a daily basis and improve it. The goal is to implement a feature and actually make it into the upstream source code of the project. The current project is Teeworlds --- a retro multiplayer game. The feature we are trying to ship is Gamepad support.",
             "days": [2],
-            "time": "22:00",
+            "time": "23:00",
             "starts": "2019-01-29",
             "channel": "https://twitch.tv/tsoding"
         },
