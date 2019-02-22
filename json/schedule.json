@@ -176,7 +176,7 @@
             "description": "Simple service that monitors the activity on GitHub and give points for contributions"
         },
         "1551024000": {
-            "description": "<p><b>UPD.</b> First ~1 hour of the string is going to be recording the next episode of <a href='https://bit.ly/haskellrank'>HaskellRank</a></p><p>A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2</p>"
+            "description": "<p><b>UPD.</b> First ~1 hour of the stream is going to be recording the next episode of <a href='https://bit.ly/haskellrank'>HaskellRank</a></p><p>A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2</p>"
         }
     }
 }
