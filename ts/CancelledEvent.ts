@@ -33,7 +33,7 @@ export default class CancelledEvent implements UiComponent {
                     {"class": "channel"}
                 ),
                 new html.Div(
-                    new html.Text(`${this._event.description}`),
+                    new html.InnerHtml(`${this._event.description}`),
                     {"class": "description markdown"}
                 ),
                 new html.Div(
