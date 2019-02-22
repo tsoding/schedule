@@ -43,7 +43,10 @@ export default class CurrentEvent implements UiComponent {
                         new html.Text(this._event.channel)),
                     {"class": "channel"}
                 ),
-                new html.Div(new html.Text(`${this._event.description}`), {"class": "description markdown"})
+                new html.Div(
+                    new html.InnerHtml(`${this._event.description}`),
+                    {"class": "description markdown"}
+                )
             ]),
             {
                 "id": `_${this._event.datetime.utc().unix()}`,
