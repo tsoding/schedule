@@ -21,10 +21,10 @@ Deployed in https://tsoding.github.io/schedule/
 $ npm install
 $ make
 $ cd dist/
-$ python -m SimpleHTTPServer 8080
-$ <browser> http://localhost:8080/
-$ make -j3 watch                  # for watch mode
-                                  # -j3 is required to run scss and ts watchers in parallel
+$ make -j4 watch                  # for watch mode
+                                  # -j4 is required to run file watchers and http server
+                                  # in parallel
+$ <browser> http://localhost:8080/dist/
 ```
 
 [inotifywait]: https://github.com/rvoicilas/inotify-tools

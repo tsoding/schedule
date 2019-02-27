@@ -2,6 +2,9 @@ TSS=$(shell find ./ts/ -type f -name '*.ts')
 BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
 SASS=./node_modules/.bin/sass
+STATIC=html/index.html css/reset.css json/schedule.json
+
+# PRODUCTION ##############################
 
 .PHONY: all
 all: dist/app.js dist/index.html dist/reset.css dist/main.css dist/schedule.json
@@ -18,14 +21,16 @@ dist/reset.css: dist css/reset.css
 dist/main.css: dist scss/main.scss
 	$(SASS) --no-source-map scss/main.scss dist/main.css
 
-dist/schedule.json: json/schedule.json
+dist/schedule.json: dist json/schedule.json
 	cp json/schedule.json dist/schedule.json
 
 dist:
 	mkdir -p dist
 
+# DEVELOPMENT ##############################
+
 .PHONY: watch
-watch: dist/schedule.json dist/reset.css watch-ts watch-scss watch-html
+watch: watch-ts watch-scss watch-static http-server
 
 .PHONY: watch-ts
 watch-ts: dist $(TSS)
@@ -35,12 +40,16 @@ watch-ts: dist $(TSS)
 watch-scss: dist scss/main.scss
 	$(SASS) --watch scss/main.scss dist/main.css
 
-.PHONY: watch-html
-watch-html: dist html/index.html
-	cp html/index.html dist/
-	while inotifywait -q -e modify,move_self html/index.html; do \
-		cp html/index.html dist/;                                \
+.PHONY: watch-static
+watch-static: dist $(STATIC)
+	cp $(STATIC) dist/
+	while inotifywait -q -e modify,move_self $(STATIC); do \
+		cp $(STATIC) dist/;                                \
 	done
+
+.PHONY: http-server
+http-server: dist
+	python -m SimpleHTTPServer 8080
 
 .PHONY: clean
 clean:
