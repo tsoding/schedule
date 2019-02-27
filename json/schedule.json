@@ -177,6 +177,9 @@
         },
         "1551024000": {
             "description": "<p><b>UPD.</b> First ~1 hour of the stream is going to be recording the next episode of <a href='https://bit.ly/haskellrank'>HaskellRank</a></p><p>A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2</p>"
+        },
+        "1551283200": {
+            "description": "<p><strong>UPD.</strong> First ~1 hour of the stream is going to be recording the next episode of <a href='https://bit.ly/haskellrank'>HaskellRank</a></p><p>Animation Framework for making animation for Tsoding YouTube channel.</p>"
         }
     }
 }
