@@ -70,6 +70,14 @@ body {
         a {
             color: darken($green, 5%)
         }
+
+        ul {
+            padding-top: 10px;
+            li {
+                margin-left: 20px;
+                list-style-type: circle;
+            }
+        }
     }
 }
 
