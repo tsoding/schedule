@@ -180,6 +180,12 @@
         },
         "1551283200": {
             "description": "<p><strong>UPD.</strong> First ~1 hour of the stream is going to be recording the next episode of <a href='https://bit.ly/haskellrank'>HaskellRank</a></p><p>Animation Framework for making animation for Tsoding YouTube channel.</p>"
+        },
+        "1552060800": {
+            "title": "YouTube Content",
+            "url": "https://www.youtube.com/tsoding",
+            "description": "Recording some videos for my <a href='https://www.youtube.com/tsoding'>YouTube Channel</a>: <ul><li>April Fools Video</li><li>Next HaskellRank episode with CodeWars</li></ul>",
+            "channel": "https://twitch.tv/tsoding"
         }
     }
 }
