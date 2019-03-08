@@ -28,6 +28,10 @@ export default class PatchedEvent implements Event {
             if (eventPatch.url) {
                 this.url = eventPatch.url;
             }
+
+            if (eventPatch.channel) {
+                this.channel = eventPatch.channel;
+            }
         }
     }
 }
