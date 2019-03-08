@@ -647,7 +647,7 @@ var moment=module.exports=require("./moment-timezone");moment.tz.load(require(".
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var EventsForCurrentPeriod_1=require("./EventsForCurrentPeriod"),FailedScheduleLoad_1=require("./FailedScheduleLoad"),StateFromUrl_1=require("./StateFromUrl");new StateFromUrl_1.default("schedule.json").asPromise().then(function(e){return new EventsForCurrentPeriod_1.default(e)},function(){return new FailedScheduleLoad_1.default}).then(function(e){return e.appendTo(document.getElementById("root"))});
 
 },{"./EventsForCurrentPeriod":11,"./FailedScheduleLoad":13,"./StateFromUrl":16,"moment-timezone":2}],18:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var PatchedEvent=function(){return function(t,e){this.datetime=t.datetime,this.title=t.title,this.description=t.description,this.url=t.url,this.channel=t.channel,e&&(e.title&&(this.title=e.title),e.description&&(this.description=e.description),e.url&&(this.url=e.url))}}();exports.default=PatchedEvent;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var PatchedEvent=function(){return function(t,e){this.datetime=t.datetime,this.title=t.title,this.description=t.description,this.url=t.url,this.channel=t.channel,e&&(e.title&&(this.title=e.title),e.description&&(this.description=e.description),e.url&&(this.url=e.url),e.channel&&(this.channel=e.channel))}}();exports.default=PatchedEvent;
 
 },{}],19:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var PatchedEvent_1=require("./PatchedEvent");exports.PatchedEvent=PatchedEvent_1.default;

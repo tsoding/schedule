@@ -56,6 +56,13 @@ body {
 .event .description a {
   color: #68b531;
 }
+.event .description ul {
+  padding-top: 10px;
+}
+.event .description ul li {
+  margin-left: 20px;
+  list-style-type: circle;
+}
 
 .event.past {
   color: #515151;
