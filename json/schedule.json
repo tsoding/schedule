@@ -71,6 +71,16 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-01-29",
+            "ends": "2019-03-11",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "MyPaint Selection Tool (Real Open Source Contribution)",
+            "url": "http://mypaint.org/",
+            "description": "<p>On the Real Open Source Contribution series we are trying to take an Open Source project that I personally use on a daily basis and improve it. The goal is to implement a feature and actually make it into the upstream source code of the project.</p><p><strong>Current Project:</strong> <a href='http://mypaint.org/'>MyPaint</a></p><p><strong>Feature:</strong> Selection Tool.</p>",
+            "days": [2],
+            "time": "23:00",
+            "starts": "2019-01-29",
             "channel": "https://twitch.tv/tsoding"
         },
         {
