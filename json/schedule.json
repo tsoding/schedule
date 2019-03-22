@@ -196,6 +196,12 @@
             "url": "https://www.youtube.com/tsoding",
             "description": "Recording some videos for my <a href='https://www.youtube.com/tsoding'>YouTube Channel</a>: <ul><li>April Fools Video</li><li>Next HaskellRank episode with CodeWars</li></ul>",
             "channel": "https://twitch.tv/tsoding"
+        },
+        "1553270400": {
+            "title": "Smart Stream",
+            "url": "https://www.twitch.tv/tsoding",
+            "description": "<p>On Smart Stream we watch educational videos trying to get smart.</p>",
+            "channel": "https://twitch.tv/tsoding"
         }
     }
 }
