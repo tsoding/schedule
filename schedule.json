@@ -90,7 +90,17 @@
             "days": [5],
             "time": "23:00",
             "starts": "2019-02-17",
+            "ends": "2019-03-27",
             "channel": "https://twitch.tv/r3x1m"
+        },
+        {
+            "name": "Smart Stream",
+            "url": "https://www.twitch.tv/tsoding",
+            "description": "<p>On Smart Stream we watch educational videos trying to get smart.</p>",
+            "days": [5],
+            "time": "23:00",
+            "starts": "2019-03-28",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "extraEvents": [
