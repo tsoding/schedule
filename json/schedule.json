@@ -96,7 +96,7 @@
         {
             "name": "Smart Stream",
             "url": "https://www.twitch.tv/tsoding",
-            "description": "<p>On Smart Stream we watch educational videos trying to get smart.</p>",
+            "description": "<p>On Smart Stream we watch educational videos trying to get smart.</p><p>Use command <strong>!friday</strong> to suggest a video in <a href='https://www.twitch.tv/tsoding'>Twitch</a> or <a href='https://discord.gg/KehewYS'>Discord</a> chats.</p>",
             "days": [5],
             "time": "23:00",
             "starts": "2019-03-28",
