@@ -212,6 +212,10 @@
             "url": "https://www.twitch.tv/tsoding",
             "description": "<p>On Smart Stream we watch educational videos trying to get smart.</p>",
             "channel": "https://twitch.tv/tsoding"
+        },
+        "1555430400": {
+            "title": "Teeworlds Gamepad + MyPaint Selection Tool (Real Open Source Contribution)",
+            "description": "<p><strong>UPD.</strong> First half of the stream will be fixing the gamepad support that we implemented for <a href='https://github.com/teeworlds/teeworlds'>Teeworlds</a>. Issue <a href='https://github.com/teeworlds/teeworlds/issues/2085'>#2085</a></p><p>On the Real Open Source Contribution series we are trying to take an Open Source project that I personally use on a daily basis and improve it. The goal is to implement a feature and actually make it into the upstream source code of the project.</p><p><strong>Current Project:</strong> <a href='http://mypaint.org/'>MyPaint</a></p><p><strong>Feature:</strong> Selection Tool.</p>"
         }
     }
 }
