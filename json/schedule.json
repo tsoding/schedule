@@ -221,6 +221,11 @@
             "title": "Trying out Nim",
             "description": "On this stream we are just trying out <a href='https://nim-lang.org/'>Nim Programming Language</a>. Nothing special.",
             "url": "https://nim-lang.org/"
+        },
+        "1556640000": {
+            "title": "Nim II",
+            "description": "On the previous Nim stream the compilation killed my Laptop and we didn't have an opportunity to properly check out the language. Let's try to do it again!",
+            "url": "https://nim-lang.org/"
         }
     }
 }
