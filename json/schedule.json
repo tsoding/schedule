@@ -135,6 +135,14 @@
             "url": "https://github.com/tsoding/multik",
             "description": "Animation Framework for making animation for Tsoding YouTube channel",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "date": "2019-05-06",
+            "time": "23:00",
+            "title": "Extra Haskell Stream",
+            "url": "https://www.youtube.com/tsoding",
+            "description": "First half — recording a video for the <a href='https://www.youtube.com/tsoding'>YouTube Channel</a>. Second half — <a href='https://github.com/tsoding/HyperNerd'>HyperNerd</a> development.",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000],
