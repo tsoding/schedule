@@ -234,6 +234,11 @@
             "title": "Nim II",
             "description": "On the previous Nim stream the compilation killed my Laptop and we didn't have an opportunity to properly check out the language. Let's try to do it again!",
             "url": "https://nim-lang.org/"
+        },
+        "1557244800": {
+            "title": "Nim III",
+            "description": "HDD on my main streaming machine died. On my backup laptop I have only Nim. Let's do another Nim stream lol.",
+            "url": "https://github.com/tsoding/vitanim"
         }
     }
 }
