@@ -3,18 +3,26 @@ import * as list from './list';
 import * as moment from 'moment';
 import Event from './Event'
 import UiComponent from './UiComponent';
+import ComponentsArray from './ComponentsArray';
+import DayOff from './DayOff';
 
 // TODO(#69): EventsForDay can be a concatenation of RecurringEventsForDay and ScheduledEventsForDay objects
-export default class EventsForDay implements UiComponent, list.List<Event> {
+export default class EventsForDay implements UiComponent {
     constructor(private _state: dto.State,
                 private _date: string) {
     }
 
     appendTo(entry: HTMLElement | null): void {
-        this.asArray().forEach((e) => e.appendTo(entry))
+        const events = this._asArray();
+
+        if (events.length > 0) {
+            new ComponentsArray(events).appendTo(entry);
+        } else {
+            new DayOff(this._state, this._date).appendTo(entry);
+        }
     }
 
-    asArray(): Array<Event> {
+    _asArray(): Array<Event> {
         let weekday = moment.tz(this._date, this._state.timezone).isoWeekday();
         return this._state.projects
             .filter(
