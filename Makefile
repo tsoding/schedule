@@ -22,7 +22,7 @@ dist/main.css: dist scss/main.scss
 	$(SASS) --no-source-map scss/main.scss dist/main.css
 
 dist/schedule.json: dist json/schedule.json
-	cp json/schedule.json dist/schedule.json
+	jq -c . json/schedule.json > dist/schedule.json
 
 dist:
 	mkdir -p dist
