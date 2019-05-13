@@ -26,14 +26,6 @@ export default class Event implements UiComponent {
         }
     }
 
-    isPast(): boolean {
-        if (this.isCancelled()) {
-            return moment().diff(this._event.datetime, 'seconds') > 0;
-        } else {
-            return moment().diff(this._event.datetime, 'seconds') >= 4 * 60 * 60;
-        }
-    }
-
     isCancelled(): boolean {
         return this._canceldEvents.findIndex((c) => c == this._event.datetime.unix()) >= 0;
     }
