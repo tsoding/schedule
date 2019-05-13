@@ -14,6 +14,7 @@ Deployed in https://tsoding.github.io/schedule/
 - [coreutils]
 - [inotifywatch]
 - [python]
+- [jq]
 
 ## Quick Start
 
@@ -34,3 +35,4 @@ $ <browser> http://localhost:8080/dist/
 [coreutils]: https://www.gnu.org/software/coreutils/coreutils.html
 [inotifywatch]: https://github.com/rvoicilas/inotify-tools
 [python]: https://www.python.org/
+[jq]: https://stedolan.github.io/jq/
