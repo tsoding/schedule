@@ -63,6 +63,11 @@ body {
   margin-left: 20px;
   list-style-type: circle;
 }
+.event .player {
+  padding-top: 20px;
+  width: 540px;
+  height: 303.75px;
+}
 
 .event.past {
   color: #515151;
