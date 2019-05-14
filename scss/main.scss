@@ -79,6 +79,12 @@ body {
             }
         }
     }
+
+    .player {
+        padding-top: 20px;
+        width: $page_width * 0.75;
+        height: $page_width * 0.75 * (9 / 16);
+    }
 }
 
 .event.past {

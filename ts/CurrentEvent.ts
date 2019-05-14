@@ -4,6 +4,7 @@ import * as moment from 'moment';
 import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
+import TwitchPlayer from './TwitchPlayer';
 
 export default class CurrentEvent implements UiComponent {
     constructor(private _event: dto.Event) {
@@ -46,7 +47,10 @@ export default class CurrentEvent implements UiComponent {
                 new html.Div(
                     new html.Markdown(`${this._event.description}`),
                     {"class": "description markdown"}
-                )
+                ),
+                // TODO(#106): the preview twitch channel in CurrentEvent is hardcoded
+                //   It should be taken from this._event.channel
+                new TwitchPlayer("tsoding")
             ]),
             {
                 "id": `_${this._event.datetime.utc().unix()}`,
