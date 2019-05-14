@@ -81,6 +81,7 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-01-29",
+            "ends": "2019-05-15",
             "channel": "https://twitch.tv/tsoding"
         },
         {
@@ -100,6 +101,15 @@
             "days": [5],
             "time": "23:00",
             "starts": "2019-03-28",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "Chatterino 2 (Real Open Source Contribution)",
+            "url": "https://github.com/fourtf/chatterino2",
+            "description": "On the Real Open Source Contribution series we are trying to take an Open Source project that I personally use on a daily basis and improve it. The goal is to implement a feature and actually make it into the upstream source code of the project.\n\n**Current Project:** [Chatterino 2](https://github.com/fourtf/chatterino2)\n\n**Feature:** [#976](https://github.com/fourtf/chatterino2/issues/976).",
+            "days": [2],
+            "time": "23:00",
+            "starts": "2019-05-15",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
