@@ -24,6 +24,12 @@ export default class Event implements UiComponent {
         } else {
             new FutureEvent(this._event).appendTo(entry);
         }
+
+        const hashId = "#_" + this._event.datetime.utc().unix();
+        if (window.location.hash == hashId) {
+            window.location.hash = "";
+            setTimeout(() => { window.location.hash = hashId; }, 0);
+        }
     }
 
     isCancelled(): boolean {
