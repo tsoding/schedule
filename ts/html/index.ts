@@ -5,3 +5,4 @@ export { default as Href } from './Href';
 export { default as Tag } from './Tag';
 export { default as Text } from './Text';
 export { default as InnerHtml } from './InnerHtml';
+export { default as Markdown } from './Markdown';
