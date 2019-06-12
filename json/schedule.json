@@ -262,6 +262,11 @@
             "title": "Chatterino 2 (Real Open Source Contribution)",
             "description": "<p>On the Real Open Source Contribution series we are trying to take an Open Source project that I personally use on a daily basis and improve it. The goal is to implement a feature and actually make it into the upstream source code of the project.</p><p><strong>Current Project:</strong> <a href='https://github.com/fourtf/chatterino2'>Chatterino 2</a></p><p><strong>Feature:</strong> Probably <a href='https://github.com/fourtf/chatterino2/issues/976'>#976</a></p>",
             "url": "https://github.com/fourtf/chatterino2"
+        },
+        "1560355200": {
+            "title": "New Project (Pilot Stream)",
+            "description": "[REDACTED]",
+            "url": "https://tsoding.github.io/schedule/#_1560355200"
         }
     }
 }
