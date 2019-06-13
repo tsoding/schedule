@@ -43,6 +43,7 @@
             "days": [3],
             "time": "23:00",
             "starts": "2019-01-12",
+            "ends": "2019-06-13",
             "channel": "https://twitch.tv/tsoding"
         },
         {
@@ -110,6 +111,15 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-05-15",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "PinPog (Game in Assembly)",
+            "url": "https://github.com/tsoding/pinpog",
+            "description": "Ping Pong in Assembly that works without OS. Our goal is to write a game that fits into 512 bytes bootloader and works in 16 bit real mode on any IBM PC compatible machine without any Operating System.",
+            "days": [3],
+            "time": "23:00",
+            "starts": "2019-06-13",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
