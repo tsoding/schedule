@@ -111,6 +111,16 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-05-15",
+            "ends": "2019-06-17",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "GRUB 2 (Real Open Source Contribution)",
+            "url": "https://www.gnu.org/software/grub/grub-download.html",
+            "description": "On the Real Open Source Contribution series we are trying to take an Open Source project that I personally use on a daily basis and improve it. The goal is to implement a feature and actually make it into the upstream source code of the project.\n\n**Current Project:** [GRUB 2](https://www.gnu.org/software/grub/grub-download.html)\n\n**Feature:** [Gamepad Support](https://steamcommunity.com/groups/steamuniverse/discussions/0/558751660797029626/)",
+            "days": [2],
+            "time": "23:00",
+            "starts": "2019-06-18",
             "channel": "https://twitch.tv/tsoding"
         },
         {
