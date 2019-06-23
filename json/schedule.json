@@ -181,6 +181,14 @@
             "url": "https://github.com/tsoding/HyperNerd",
             "description": "Since the last Haskell stream was cancelled due to my Internet being down, let's make another one instead of day off.",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "date": "2019-06-24",
+            "time": "23:00",
+            "title": "Recording YouTube video (Haskell)",
+            "url": "https://youtub.com/tsoding",
+            "description": "Recording next YouTube video.",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000],
