@@ -34,7 +34,7 @@ watch: watch-ts watch-scss watch-static http-server
 
 .PHONY: watch-ts
 watch-ts: dist $(TSS)
-	$(WATCHIFY) ./ts/app.ts -v -p tsify --outfile dist/app.js
+	$(WATCHIFY) ./ts/app.ts -v -p tsify --outfile dist/app.js --debug
 
 .PHONY: watch-scss
 watch-scss: dist scss/main.scss
