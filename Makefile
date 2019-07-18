@@ -16,7 +16,7 @@ dist/index.html: dist html/index.html
 	cp html/index.html dist/
 
 dist/reset.css: dist css/reset.css
-	cp css/reset.css dist/reset.css
+	cp css/reset.css dist/
 
 dist/main.css: dist scss/main.scss
 	$(SASS) --no-source-map scss/main.scss dist/main.css

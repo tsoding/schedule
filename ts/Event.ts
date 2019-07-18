@@ -9,7 +9,7 @@ import UiComponent from './UiComponent';
 
 export default class Event implements UiComponent {
     constructor(private _event: dto.Event,
-                private _canceldEvents: Array<number>) {
+                private _canceledEvents: Array<number>) {
     }
 
     appendTo(entry: HTMLElement | null): void {
@@ -33,6 +33,10 @@ export default class Event implements UiComponent {
     }
 
     isCancelled(): boolean {
-        return this._canceldEvents.findIndex((c) => c == this._event.datetime.unix()) >= 0;
+        if (!this._canceledEvents) {
+            return false;
+        }
+
+        return this._canceledEvents.findIndex((c) => c == this._event.datetime.unix()) >= 0;
     }
 }
