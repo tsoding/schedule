@@ -77,6 +77,12 @@ body {
         color: $red;
     }
 
+    .copy {
+        color: $dimmed_foreground;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
     .description {
         margin-top: 20px;
         text-align: left;
