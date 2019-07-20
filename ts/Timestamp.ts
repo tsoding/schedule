@@ -1,18 +1,18 @@
 import * as dto from './dto';
 import * as html from './html';
 import * as moment from 'moment';
-import copy = require('clipboard-copy')
 import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
 import TwitchPlayer from './TwitchPlayer';
+import copyToClipboard from './util/copyToClipboard';
 
 export default class CurrentEvent implements UiComponent {
     constructor(private _timestamp: string) {
     }
 
     onCopyClick = () => {
-        copy(this._timestamp)
+        copyToClipboard(this._timestamp)
     }
 
     appendTo(entry: HTMLElement | null): void {

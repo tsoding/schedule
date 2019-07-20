@@ -1,7 +1,6 @@
 import * as dto from './dto';
 import * as html from './html';
 import * as moment from 'moment';
-import copy = require('clipboard-copy')
 import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
