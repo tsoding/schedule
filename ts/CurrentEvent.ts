@@ -48,7 +48,7 @@ export default class CurrentEvent implements UiComponent {
                     new html.Markdown(`${this._event.description}`),
                     {"class": "description markdown"}
                 ),
-                new TwitchPlayer(new URL(this._event.channel).pathname.substring(1));
+                new TwitchPlayer(new URL(this._event.channel).pathname.substring(1))
             ]),
             {
                 "id": `_${this._event.datetime.utc().unix()}`,
