@@ -24,7 +24,7 @@ export default class EventsForDay implements UiComponent {
 
     _asArray(): Array<Event> {
         let weekday = moment.tz(this._date, this._state.timezone).isoWeekday();
-        return this._state.projects
+        return !this._state.projects ? [] : this._state.projects
             .filter(
                 (p) => {
                     let thisDate = moment.tz(`${this._date}`, this._state.timezone).utc().unix();
@@ -48,7 +48,7 @@ export default class EventsForDay implements UiComponent {
                 }
             )
             .concat(
-                this._state.extraEvents
+                !this._state.extraEvents ? [] : this._state.extraEvents
                     .filter(
                         (ee) => ee.date == this._date
                     )
