@@ -48,9 +48,7 @@ export default class CurrentEvent implements UiComponent {
                     new html.Markdown(`${this._event.description}`),
                     {"class": "description markdown"}
                 ),
-                // TODO(#106): the preview twitch channel in CurrentEvent is hardcoded
-                //   It should be taken from this._event.channel
-                new TwitchPlayer("tsoding")
+                new TwitchPlayer(new URL(this._event.channel).pathname.substring(1));
             ]),
             {
                 "id": `_${this._event.datetime.utc().unix()}`,
