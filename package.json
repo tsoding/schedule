@@ -12,6 +12,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-regular-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@types/markdown-it": "0.0.7",
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.6",
