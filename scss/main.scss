@@ -6,6 +6,25 @@ $green: #73c936;
 $yellow: #ffdd33;
 $red: #f43841;
 
+// FontAwesome imports
+$fa-font-path: './webfonts';
+@import 'fontawesome';
+@import 'brands';
+@import 'regular';
+@import 'solid';
+
+// Example to add FontAwesome to an existing class
+/*
+.twitch {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-twitch);
+    }
+}
+*/
+
 body {
     background: $background;
     color: $foreground;
