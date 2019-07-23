@@ -22,6 +22,8 @@ dist/reset.css: dist css/reset.css
 	cp css/reset.css dist/
 
 dist/main.css: dist scss/main.scss
+	mkdir -p dist/webfonts
+	cp node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts/
 	$(SASS) $(SASS_BUILD_FLAGS) scss/main.scss dist/main.css
 
 dist/schedule.json: dist json/schedule.json
@@ -41,6 +43,8 @@ watch-ts: dist $(TSS)
 
 .PHONY: watch-scss
 watch-scss: dist scss/main.scss
+	mkdir -p dist/webfonts
+	cp node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts/
 	$(SASS) $(SASS_WATCH_FLAGS) scss/main.scss dist/main.css
 
 .PHONY: watch-static
