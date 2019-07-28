@@ -2,6 +2,9 @@ TSS=$(shell find ./ts/ -type f -name '*.ts')
 BROWSERIFY=./node_modules/.bin/browserify
 WATCHIFY=./node_modules/.bin/watchify
 SASS=./node_modules/.bin/sass
+SASS_FLAGS=--load-path=node_modules/@fortawesome/fontawesome-free/scss
+SASS_BUILD_FLAGS=$(SASS_FLAGS) --no-source-map
+SASS_WATCH_FLAGS=$(SASS_FLAGS) --watch
 STATIC=html/index.html css/reset.css json/schedule.json
 
 # PRODUCTION ##############################
@@ -19,7 +22,9 @@ dist/reset.css: dist css/reset.css
 	cp css/reset.css dist/
 
 dist/main.css: dist scss/main.scss
-	$(SASS) --no-source-map scss/main.scss dist/main.css
+	mkdir -p dist/webfonts
+	cp node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts/
+	$(SASS) $(SASS_BUILD_FLAGS) scss/main.scss dist/main.css
 
 dist/schedule.json: dist json/schedule.json
 	jq -c . json/schedule.json > dist/schedule.json
@@ -38,7 +43,9 @@ watch-ts: dist $(TSS)
 
 .PHONY: watch-scss
 watch-scss: dist scss/main.scss
-	$(SASS) --watch scss/main.scss dist/main.css
+	mkdir -p dist/webfonts
+	cp node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts/
+	$(SASS) $(SASS_WATCH_FLAGS) scss/main.scss dist/main.css
 
 .PHONY: watch-static
 watch-static: dist $(STATIC)
