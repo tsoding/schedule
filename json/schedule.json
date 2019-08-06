@@ -130,6 +130,7 @@
             "days": [3],
             "time": "23:00",
             "starts": "2019-06-13",
+            "ends": "2019-08-01",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
