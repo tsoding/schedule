@@ -305,6 +305,11 @@
             "title": "New Project (Pilot Stream)",
             "description": "[REDACTED]",
             "url": "https://tsoding.github.io/schedule/#_1560355200"
+        },
+        "1568736000": {
+            "title": "TempleOS",
+            "description": "The GRUB gamepad patch was submitted to grub-devel mailing list, but nobody responded yet. So in the meantime while we are waiting for the feedback let's do a filler stream and play with Operating System created by The Smartest Programmer That Ever Lived",
+            "url": "https://templeos.org/"
         }
     }
 }
