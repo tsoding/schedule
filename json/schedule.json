@@ -199,6 +199,14 @@
             "url": "https://youtub.com/tsoding",
             "description": "Recording next YouTube video.",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "date": "2019-09-23",
+            "time": "23:00",
+            "title": "Nothing (Game in Pure C)",
+            "url": "https://github.com/tsoding/nothing",
+            "description": "A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600],
