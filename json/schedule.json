@@ -318,6 +318,11 @@
             "title": "TempleOS",
             "description": "The GRUB gamepad patch was submitted to grub-devel mailing list, but nobody responded yet. So in the meantime while we are waiting for the feedback let's do a filler stream and play with Operating System created by The Smartest Programmer That Ever Lived",
             "url": "https://templeos.org/"
+        },
+        "1569340800": {
+            "title": "HTTP Server in C",
+            "description": "Still no response from GRUB devs. Let's do something random.",
+            "url": "https://twitch.tv/tsoding"
         }
     }
 }
