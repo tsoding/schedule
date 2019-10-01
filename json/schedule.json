@@ -323,6 +323,11 @@
             "title": "HTTP Server in C",
             "description": "Still no response from GRUB devs. Let's do something random.",
             "url": "https://twitch.tv/tsoding"
+        },
+        "1569945600": {
+            "title": "HTTP Server in C again",
+            "description": "The GRUB devs acknowledged the existence of the patch, but we still have not recieve any actual feedback that we can work on. Let's continue playing with WebDev in Pure C",
+            "url": "https://github.com/tsoding/node.c"
         }
     }
 }
