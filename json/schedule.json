@@ -121,6 +121,7 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-06-18",
+            "ends": "2019-10-07",
             "channel": "https://twitch.tv/tsoding"
         },
         {
@@ -140,6 +141,15 @@
             "days": [3],
             "time": "23:00",
             "starts": "2019-08-07",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "Next Open Source Contribution Project",
+            "url": "https://tsoding.org/",
+            "description": "[REDACTED]",
+            "days": [2],
+            "time": "23:00",
+            "starts": "2019-10-07",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
@@ -206,6 +216,14 @@
             "title": "Nothing (Game in Pure C)",
             "url": "https://github.com/tsoding/nothing",
             "description": "A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "date": "2019-10-07",
+            "time": "23:00",
+            "title": "Last GRUB 2 stream",
+            "url": "https://www.gnu.org/software/grub/grub-download.html",
+            "description": "It was a fun project, but it's time to wrap it up...",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
