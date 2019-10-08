@@ -144,9 +144,9 @@
             "channel": "https://twitch.tv/tsoding"
         },
         {
-            "name": "Next Open Source Contribution Project",
-            "url": "https://tsoding.org/",
-            "description": "[REDACTED]",
+            "name": "Minetest (Real Open Source Contribution)",
+            "url": "https://github.com/minetest/minetest",
+            "description": "Minetest, an open source infinite-world block sandbox game engine with support for survival and crafting. Have not figured out what to contribute yet...",
             "days": [2],
             "time": "23:00",
             "starts": "2019-10-07",
