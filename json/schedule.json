@@ -146,7 +146,7 @@
         {
             "name": "Minetest (Real Open Source Contribution)",
             "url": "https://github.com/minetest/minetest",
-            "description": "Minetest, an open source infinite-world block sandbox game engine with support for survival and crafting. Have not figured out what to contribute yet...",
+            "description": "Minetest, an open source infinite-world block sandbox game engine with support for survival and crafting. We are trying to fix bug [#3075](https://github.com/minetest/minetest/issues/3075).",
             "days": [2],
             "time": "23:00",
             "starts": "2019-10-07",
