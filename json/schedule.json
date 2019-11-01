@@ -225,6 +225,14 @@
             "url": "https://www.gnu.org/software/grub/grub-download.html",
             "description": "It was a fun project, but it's time to wrap it up...",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "date": "2019-11-04",
+            "time": "23:00",
+            "title": "JSON Parser in 100 Lines from scratch in Haskell",
+            "url": "https://tsoding.org/schedule",
+            "description": "",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600],
