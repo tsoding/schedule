@@ -150,6 +150,16 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-10-07",
+            "ends": "2019-11-13",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "Next Open Source Project",
+            "url": "https://twitch.tv/tsoding",
+            "description": "[REDACTED]",
+            "days": [2],
+            "time": "23:00",
+            "starts": "2019-11-19",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
