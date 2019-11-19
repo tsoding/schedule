@@ -154,9 +154,9 @@
             "channel": "https://twitch.tv/tsoding"
         },
         {
-            "name": "Next Open Source Project",
-            "url": "https://twitch.tv/tsoding",
-            "description": "[REDACTED]",
+            "name": "Syncthing (Real Open Source Contribution)",
+            "url": "https://syncthing.net/",
+            "description": "Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers and replaces proprietary sync and cloud services with something open, trustworthy and decentralized.\n\nSee https://github.com/tsoding/trophy#syncthing for more information.",
             "days": [2],
             "time": "23:00",
             "starts": "2019-11-19",
