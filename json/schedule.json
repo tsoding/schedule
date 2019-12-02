@@ -160,6 +160,16 @@
             "days": [2],
             "time": "23:00",
             "starts": "2019-11-19",
+            "ends": "2019-12-03",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "NEXT OPEN SOURCE PROJECT",
+            "url": "https://github.com/tsoding/trophy",
+            "description": "[REDACTED]",
+            "days": [2],
+            "time": "23:00",
+            "starts": "2019-12-09",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
@@ -363,6 +373,11 @@
         "1569945600": {
             "title": "HTTP Server in C again",
             "description": "The GRUB devs acknowledged the existence of the patch, but we still have not recieve any actual feedback that we can work on. Let's continue playing with WebDev in Pure C",
+            "url": "https://github.com/tsoding/node.c"
+        },
+        "1575388800": {
+            "title": "Web Application in C",
+            "description": "I looked into Syncthing project for the past two weeks and just could not find anything interesting to work on. So we probably gonna do a different project next week, but today let's do Web Dev in C again lol",
             "url": "https://github.com/tsoding/node.c"
         }
     }
