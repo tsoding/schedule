@@ -164,9 +164,9 @@
             "channel": "https://twitch.tv/tsoding"
         },
         {
-            "name": "NEXT OPEN SOURCE PROJECT",
-            "url": "https://github.com/tsoding/trophy",
-            "description": "[REDACTED]",
+            "name": "Web Application in C",
+            "url": "https://github.com/tsoding/node.c",
+            "description": "Implementing Web Framework in C",
             "days": [2],
             "time": "23:00",
             "starts": "2019-12-09",
