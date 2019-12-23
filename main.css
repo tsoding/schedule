@@ -5890,6 +5890,13 @@ body {
   margin-left: 20px;
   list-style-type: circle;
 }
+.event .description ol {
+  padding-top: 10px;
+}
+.event .description ol li {
+  margin-left: 20px;
+  list-style-type: decimal;
+}
 .event .player {
   padding-top: 20px;
   width: 540px;
