@@ -97,6 +97,14 @@ body {
                 list-style-type: circle;
             }
         }
+
+        ol {
+            padding-top: 10px;
+            li {
+                margin-left: 20px;
+                list-style-type: decimal;
+            }
+        }
     }
 
     .player {
