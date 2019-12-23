@@ -165,8 +165,8 @@
         },
         {
             "name": "Web Application in C",
-            "url": "https://github.com/tsoding/node.c",
-            "description": "Implementing Web Framework in C",
+            "url": "https://github.com/tsoding/skedudle",
+            "description": "Simple Event Schedule Web Application in C. This project has two goals:\n1. Implement backgend for https://github.com/tsoding/schedule\n2. Implement enough Web related code to later extract it as an epic Web Framework in C",
             "days": [2],
             "time": "23:00",
             "starts": "2019-12-09",
