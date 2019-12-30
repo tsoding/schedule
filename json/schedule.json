@@ -261,9 +261,18 @@
             "url": "https://twitch.tv/tsoding",
             "description": "I finally set up Debian on my second laptop to the point where I think it might be streamable. Testing it out. Gonna do some random Farting Around™.",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "title": "Web Application in C",
+            "url": "https://github.com/tsoding/skedudle",
+            "description": "Simple Event Schedule Web Application in C. This project has two goals:\n1. Implement backgend for https://github.com/tsoding/schedule\n2. Implement enough Web related code to later extract it as an epic Web Framework in C",
+            "days": [2],
+            "time": "23:00",
+            "date": "2019-12-30",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
-    "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000],
+    "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000, 1577808000],
     "timezone": "Asia/Novosibirsk",
     "eventPatches": {
         "1536163200": {
