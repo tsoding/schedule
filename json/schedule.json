@@ -266,9 +266,16 @@
             "title": "Web Application in C",
             "url": "https://github.com/tsoding/skedudle",
             "description": "Simple Event Schedule Web Application in C. This project has two goals:\n1. Implement backgend for https://github.com/tsoding/schedule\n2. Implement enough Web related code to later extract it as an epic Web Framework in C",
-            "days": [2],
             "time": "23:00",
             "date": "2019-12-30",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "title": "Some Quick YouTube stuff recording",
+            "url": "https://twitch.tv/tsoding",
+            "description": "Nothing much to say. We gonna record some stuff for YouTube.",
+            "time": "23:00",
+            "date": "2020-01-20",
             "channel": "https://twitch.tv/tsoding"
         }
     ],
