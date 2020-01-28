@@ -136,11 +136,21 @@
         },
         {
             "name": "Linux Magnifier App in Nim",
-            "url": "http://github.com/tsoding/boomer",
+            "url": "https://github.com/tsoding/boomer",
             "description": "Magnifier (Zoomer) Application for Boomers. Works similarly to the builtin zoomer in XFCE Window Manager",
             "days": [3],
             "time": "23:00",
             "starts": "2019-08-07",
+            "ends": "2020-01-30",
+            "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "Vodus (VOD chat renderer in C++)",
+            "url": "https://github.com/tsoding/vodus",
+            "description": "VOD chat renderer",
+            "days": [3],
+            "time": "23:00",
+            "starts": "2020-02-05",
             "channel": "https://twitch.tv/tsoding"
         },
         {
