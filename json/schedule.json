@@ -6,7 +6,8 @@
             "url": "https://github.com/tsoding/nothing",
             "days": [6, 7],
             "time": "23:00",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "https://twitch.tv/tsoding",
+            "ends": "2020-02-08"
         },
         {
             "name": "HyperNerd (Bot in Haskell)",
@@ -181,6 +182,15 @@
             "time": "23:00",
             "starts": "2019-12-09",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "Next Gamedev !project",
+            "description": "Nothing is put on hiatus for now: https://gist.github.com/rexim/9a66d86860681b1b34f414572fddf4ff\n\nStarting a new !project today!",
+            "url": "https://twitch.tv/tsoding",
+            "days": [6, 7],
+            "time": "23:00",
+            "channel": "https://twitch.tv/tsoding",
+            "starts": "2020-02-09"
         }
     ],
     "extraEvents": [
