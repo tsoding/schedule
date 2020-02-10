@@ -8,14 +8,13 @@ import TwitchPlayer from './TwitchPlayer';
 import Timestamp from './Timestamp'
 
 export default class CurrentEvent implements UiComponent {
-    constructor(private _event: dto.Event,
-                private _timestamp: string) {
+    constructor(private _event: dto.Event) {
     }
 
     appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new ComponentsArray([
-                new Timestamp(this._timestamp),
+                new Timestamp(this._event.timestamp()),
                 new html.Div(
                     new html.Href(
                         this._event.channel ? this._event.channel : "https://twitch.tv/tsoding",

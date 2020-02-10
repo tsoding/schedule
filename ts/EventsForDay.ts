@@ -67,8 +67,8 @@ export default class EventsForDay implements UiComponent {
             .map(
                 (e) => new Event(
                     this._state.eventPatches
-                        ? new dto.PatchedEvent(e, this._state.eventPatches[e.datetime.utc().unix()])
-                        : e,
+                        ? new dto.PatchedEvent(e as dto.Event, this._state.eventPatches[e.datetime.utc().unix()])
+                        : e as dto.Event,
                     this._state.cancelledEvents
                 )
             )

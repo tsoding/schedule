@@ -1,3 +1,5 @@
+// Adapted from https://github.com/feross/clipboard-copy
+
 export default function copyToClipboard(text: string) {
   // Use the Async Clipboard API when available. Requires a secure browing context (i.e. HTTPS)
   if ((navigator as any).clipboard) {
@@ -19,7 +21,7 @@ export default function copyToClipboard(text: string) {
   // Make a selection object representing the range of text selected by the user
   const selection = window.getSelection()
   const range = window.document.createRange()
-  
+
   if (!selection) {
     return Promise.reject()
   }
@@ -40,8 +42,7 @@ export default function copyToClipboard(text: string) {
   selection.removeAllRanges()
   window.document.body.removeChild(span)
 
-  // The Async Clipboard API returns a promise that may reject with `undefined`
-  // so we match that here for consistency.
+  // The Async Clipboard API returns a promise that may reject with `undefined` so we match that here for consistency.
   return success
     ? Promise.resolve()
     : Promise.reject()

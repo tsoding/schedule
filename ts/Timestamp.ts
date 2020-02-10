@@ -7,7 +7,7 @@ import UiComponent from './UiComponent';
 import TwitchPlayer from './TwitchPlayer';
 import copyToClipboard from './util/copyToClipboard';
 
-export default class CurrentEvent implements UiComponent {
+export default class Timestamp implements UiComponent {
     constructor(private _timestamp: string) {
     }
 

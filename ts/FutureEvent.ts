@@ -7,14 +7,13 @@ import UiComponent from './UiComponent';
 import Timestamp from './Timestamp';
 
 export default class FutureEvent implements UiComponent {
-    constructor(private _event: dto.Event,
-                private _timestamp: string) {
+    constructor(private _event: dto.Event) {
     }
 
     appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new ComponentsArray([
-                new Timestamp(this._timestamp),
+                new Timestamp(this._event.timestamp()),
                 new html.H1(
                     new html.Href(
                         `${this._event.url}`,
