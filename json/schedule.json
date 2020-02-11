@@ -184,9 +184,9 @@
             "channel": "https://twitch.tv/tsoding"
         },
         {
-            "name": "Next Gamedev !project",
-            "description": "Nothing is put on hiatus for now: https://gist.github.com/rexim/9a66d86860681b1b34f414572fddf4ff\n\nStarting a new !project today!",
-            "url": "https://twitch.tv/tsoding",
+            "name": "Next Gamedev Project",
+            "description": "[Nothing is put on hiatus for now](https://gist.github.com/rexim/9a66d86860681b1b34f414572fddf4ff)\n\nThis is the next gamedev project with the goal to actually ship something. It's gonna be a platformer as well. Details will be revealed later.",
+            "url": "https://github.com/tsoding/something",
             "days": [6, 7],
             "time": "23:00",
             "channel": "https://twitch.tv/tsoding",
