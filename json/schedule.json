@@ -103,6 +103,7 @@
             "days": [5],
             "time": "23:00",
             "starts": "2019-03-28",
+            "ends": "2020-04-14",
             "channel": "https://twitch.tv/tsoding"
         },
         {
@@ -191,6 +192,15 @@
             "time": "23:00",
             "channel": "https://twitch.tv/tsoding",
             "starts": "2020-02-09"
+        },
+        {
+            "name": "Random One-Off Stream",
+            "description": "Just a random one-off stream on a random topic.",
+            "url": "https://twitch.tv/tsoding",
+            "days": [5],
+            "time": "23:00",
+            "starts": "2020-04-14",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "extraEvents": [
