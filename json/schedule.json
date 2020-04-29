@@ -204,9 +204,9 @@
             "channel": "https://twitch.tv/tsoding"
         },
         {
-            "name": "NEXT PROJECT (in Rust)",
-            "url": "https://twitch.tv/tsoding",
-            "description": "[REDACTED]",
+            "name": "cm (TUI App in Rust)",
+            "url": "https://github.com/tsoding/cm",
+            "description": "The goal of this application is to recreate the [compilation-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Compilation-Mode.html) of Emacs as a standalone TUI application.",
             "days": [2],
             "time": "23:00",
             "starts": "2020-04-28",
