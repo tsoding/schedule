@@ -490,6 +490,11 @@
             "title": "Random One-Off Stream",
             "url": "https://twitch.tv/tsoding",
             "description": "Just a random one-off stream on a random topic."
+        },
+        "1592755200": {
+            "title": "WebAssembly Programming",
+            "url": "https://github.com/tsoding/wasm-gasm",
+            "description": "Finishing off what's been started yesterday."
         }
     }
 }
