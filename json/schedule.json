@@ -351,7 +351,7 @@
             "channel": "https://twitch.tv/tsoding"
         }
     ],
-    "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000, 1577808000, 1579017600, 1579104000, 1579190400, 1579276800, 1586361600, 1587139200, 1590854400, 1590940800, 1591891200, 1592582400, 1594483200, 1594569600],
+    "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000, 1577808000, 1579017600, 1579104000, 1579190400, 1579276800, 1586361600, 1587139200, 1590854400, 1590940800, 1591891200, 1592582400, 1594483200, 1594569600, 1597140000],
     "timezone": "Asia/Novosibirsk",
     "eventPatches": {
         "1536163200": {
@@ -495,6 +495,12 @@
             "title": "WebAssembly Programming",
             "url": "https://github.com/tsoding/wasm-gasm",
             "description": "Finishing off what's been started yesterday."
+        },
+        "1597334400": {
+            "title": "cm (TUI App in Rust)",
+            "url": "https://github.com/tsoding/cm",
+            "description": "The goal of this application is to recreate the [compilation-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Compilation-Mode.html) of Emacs as a standalone TUI application.",
+            "time": "17:00"
         }
     }
 }
