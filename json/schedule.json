@@ -501,6 +501,11 @@
             "url": "https://github.com/tsoding/cm",
             "description": "The goal of this application is to recreate the [compilation-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Compilation-Mode.html) of Emacs as a standalone TUI application.",
             "time": "17:00"
+        },
+        "1597831200": {
+            "title": "Tzozin Comeback!",
+            "url": "https://twitch.tv/tsoding",
+            "description": "I recently moved to a different place without stable Internet so I had to go on a hiatus until the local ISP finally comes to my apartment and connects me to the Global Network. It was a rough time. I had a pretty severe stream withdrawal but finally I'm back! Let's celebrate and drink some tea!"
         }
     }
 }
