@@ -849,7 +849,7 @@ module.exports=/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var StateFromUrl=function(){function t(t){this._url=t}return t.prototype.asPromise=function(){return fetch(this._url).then(function(t){return t.json()})},t}();exports.default=StateFromUrl;
 
 },{}],85:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),TwitchPlayer=function(){function e(e){this._userName=e}return e.prototype.appendTo=function(e){new html.Tag("iframe",new html.Empty,{src:"https://player.twitch.tv/?channel="+this._userName+"&muted=true",allowfullscreen:"true",class:"player"}).appendTo(e)},e}();exports.default=TwitchPlayer;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var html=require("./html"),TwitchPlayer=function(){function e(e){this._userName=e}return e.prototype.appendTo=function(e){new html.Tag("iframe",new html.Empty,{src:"https://player.twitch.tv/?channel="+this._userName+"&parent=tsoding.org&muted=true",allowfullscreen:"true",class:"player"}).appendTo(e)},e}();exports.default=TwitchPlayer;
 
 },{"./html":97}],86:[function(require,module,exports){
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("moment-timezone");var EventsForCurrentPeriod_1=require("./EventsForCurrentPeriod"),FailedScheduleLoad_1=require("./FailedScheduleLoad"),StateFromUrl_1=require("./StateFromUrl");new StateFromUrl_1.default("schedule.json").asPromise().then(function(e){return new EventsForCurrentPeriod_1.default(e)},function(){return new FailedScheduleLoad_1.default}).then(function(e){return e.appendTo(document.getElementById("root"))});
