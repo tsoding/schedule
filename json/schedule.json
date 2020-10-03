@@ -516,6 +516,11 @@
             "title": "Tzozin Comeback!",
             "url": "https://twitch.tv/tsoding",
             "description": "I recently moved to a different place without stable Internet so I had to go on a hiatus until the local ISP finally comes to my apartment and connects me to the Global Network. It was a rough time. I had a pretty severe stream withdrawal but finally I'm back! Let's celebrate and drink some tea!"
+        },
+        "1601719200": {
+            "title": "WCC (Low level language that compiles directly to WebAssembly)",
+            "url": "https://github.com/tsoding/wcc",
+            "description": "Low level language that compiles directly to WebAssembly. The goal of the project is to be as close to WebAssembly as possible yet providing nice abstraction mechanisms to speed up the development process. The target audience of the language is people who do [raw WebAssembly](https://surma.dev/things/raw-wasm/) development for recreational purposes."
         }
     }
 }
