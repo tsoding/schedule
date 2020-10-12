@@ -211,6 +211,15 @@
             "time": "17:00",
             "starts": "2020-04-28",
             "channel": "https://twitch.tv/tsoding"
+        },
+        {
+            "name": "Code Review",
+            "url": "https://github.com/tsoding",
+            "description": "On this day we are going through Issues and Pull Requests submitted to the Tsoding organization on GitHub",
+            "days": [1],
+            "time": "17:00",
+            "starts": "2020-10-12",
+            "channel": "https://twitch.tv/tsoding"
         }
     ],
     "extraEvents": [
