@@ -28,8 +28,8 @@ export default class FutureEvent implements UiComponent {
                 new Countdown(this._event.datetime, "Starts "),
                 new html.Div(
                     new html.Href(
-                        this._event.channel,
-                        new html.Text(this._event.channel)),
+                        `https://twitch.tv/${this._event.channel}`,
+                        new html.Text(`https://twitch.tv/${this._event.channel}`)),
                     {"class": "channel"}
                 ),
                 new html.Div(

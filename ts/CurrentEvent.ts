@@ -22,7 +22,7 @@ export default class CurrentEvent implements UiComponent {
                 ),
                 new html.Div(
                     new html.Href(
-                        this._event.channel ? this._event.channel : "https://twitch.tv/tsoding",
+                        `https://twitch.tv/${this._event.channel ? this._event.channel : "tsoding"}`,
                         new html.Tag(
                             "i",
                             new html.Empty(),
@@ -40,15 +40,15 @@ export default class CurrentEvent implements UiComponent {
                 new Countdown(this._event.datetime, "started "),
                 new html.Div(
                     new html.Href(
-                        this._event.channel,
-                        new html.Text(this._event.channel)),
+                        `https://twitch.tv/${this._event.channel}`,
+                        new html.Text(`https://twitch.tv/${this._event.channel}`)),
                     {"class": "channel"}
                 ),
                 new html.Div(
                     new html.Markdown(`${this._event.description}`),
                     {"class": "description markdown"}
                 ),
-                new TwitchPlayer(new URL(this._event.channel).pathname.substring(1))
+                new TwitchPlayer(`https://twitch.tv/${this._event.channel}`)
             ]),
             {
                 "id": `_${this._event.datetime.utc().unix()}`,
