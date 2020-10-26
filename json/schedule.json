@@ -6,7 +6,7 @@
             "url": "https://github.com/tsoding/nothing",
             "days": [6, 7],
             "time": "23:00",
-            "channel": "https://twitch.tv/tsoding",
+            "channel": "tsoding",
             "ends": "2020-02-08"
         },
         {
@@ -16,7 +16,7 @@
             "days": [4],
             "time": "17:00",
             "ends": "2020-10-21",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "YouTube content or whatever",
@@ -26,7 +26,7 @@
             "time": "23:00",
             "ends": "2018-07-23",
             "comment": "Moved to Wednesday in favor of Ray Tracer in C++",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "YouTube content or whatever",
@@ -36,7 +36,7 @@
             "time": "23:00",
             "starts": "2018-07-23",
             "ends": "2019-01-12",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Multik (OCaml, C)",
@@ -46,7 +46,7 @@
             "time": "23:00",
             "starts": "2019-01-12",
             "ends": "2019-06-13",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Ray Tracer in C++",
@@ -55,7 +55,7 @@
             "days": [2],
             "time": "23:00",
             "ends": "2018-11-10",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Snitch (GoLang)",
@@ -65,7 +65,7 @@
             "time": "22:00",
             "starts": "2018-11-11",
             "ends": "2019-01-28",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Teeworlds Gamepad Support (Real Open Source Contribution)",
@@ -75,7 +75,7 @@
             "time": "23:00",
             "starts": "2019-01-29",
             "ends": "2019-03-11",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "MyPaint Selection Tool (Real Open Source Contribution)",
@@ -85,7 +85,7 @@
             "time": "23:00",
             "starts": "2019-01-29",
             "ends": "2019-05-15",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Art Stream",
@@ -105,7 +105,7 @@
             "time": "23:00",
             "starts": "2019-03-28",
             "ends": "2020-04-14",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Chatterino 2 (Real Open Source Contribution)",
@@ -115,7 +115,7 @@
             "time": "23:00",
             "starts": "2019-05-15",
             "ends": "2019-06-17",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "GRUB 2 (Real Open Source Contribution)",
@@ -125,7 +125,7 @@
             "time": "23:00",
             "starts": "2019-06-18",
             "ends": "2019-10-07",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "PinPog (Game in Assembly)",
@@ -135,7 +135,7 @@
             "time": "23:00",
             "starts": "2019-06-13",
             "ends": "2019-08-01",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Linux Magnifier App in Nim",
@@ -145,7 +145,7 @@
             "time": "23:00",
             "starts": "2019-08-07",
             "ends": "2020-01-30",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Vodus (VOD chat renderer in C++)",
@@ -154,7 +154,7 @@
             "days": [3],
             "time": "17:00",
             "starts": "2020-02-05",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Minetest (Real Open Source Contribution)",
@@ -164,7 +164,7 @@
             "time": "23:00",
             "starts": "2019-10-07",
             "ends": "2019-11-13",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Syncthing (Real Open Source Contribution)",
@@ -174,7 +174,7 @@
             "time": "23:00",
             "starts": "2019-11-19",
             "ends": "2019-12-03",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Web Application in C",
@@ -184,7 +184,7 @@
             "time": "23:00",
             "starts": "2019-12-09",
             "ends": "2020-04-27",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Something (Game in C++)",
@@ -192,7 +192,7 @@
             "url": "https://github.com/tsoding/something",
             "days": [6, 7],
             "time": "17:00",
-            "channel": "https://twitch.tv/tsoding",
+            "channel": "tsoding",
             "starts": "2020-02-09"
         },
         {
@@ -202,7 +202,7 @@
             "days": [5],
             "time": "17:00",
             "starts": "2020-04-14",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "cm (TUI App in Rust)",
@@ -211,7 +211,7 @@
             "days": [2],
             "time": "17:00",
             "starts": "2020-04-28",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "name": "Code Review",
@@ -220,7 +220,7 @@
             "days": [1],
             "time": "17:00",
             "starts": "2020-10-12",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         }
     ],
     "extraEvents": [
@@ -230,7 +230,7 @@
             "title": "Schedule Web App in TypeScript",
             "description": "<p>Schedule for Tsoding Streams. Front-End only Single Page Application without any Back-End. Makes all of the schedule building work yours computer problem. Saves me money on hosting.</p><p>This is an extra stream to get some work done for the <a href=\"https://github.com/tsoding/schedule-beta/milestone/1\">upcoming release</a>.</p>",
             "url": "https://github.com/tsoding/schedule-beta",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2018-08-03",
@@ -238,7 +238,7 @@
             "title": "HyperNerd (Bot in Haskell)",
             "description": "Enhancing my Total Surveillance Automatic Ban Machine. Join to help to test it! Moved from Thu, Aug 2, 2018.",
             "url": "https://github.com/tsoding/HyperNerd",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2018-12-21",
@@ -246,7 +246,7 @@
             "title": "Hacking Teeworlds (Game in C++)",
             "url": "https://github.com/teeworlds/teeworlds",
             "description": "I got a pretty interesting idea for a gamepad support for this game. Wanna try to implement it on the stream.",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-01-11",
@@ -254,7 +254,7 @@
             "title": "Multik (OCaml, C)",
             "url": "https://github.com/tsoding/multik",
             "description": "Animation Framework for making animation for Tsoding YouTube channel",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-05-06",
@@ -262,7 +262,7 @@
             "title": "Extra Haskell Stream",
             "url": "https://www.youtube.com/tsoding",
             "description": "First half — recording a video for the <a href='https://www.youtube.com/tsoding'>YouTube Channel</a>. Second half — <a href='https://github.com/tsoding/HyperNerd'>HyperNerd</a> development.",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-06-03",
@@ -270,7 +270,7 @@
             "title": "Extra Haskell Stream (HyperNerd)",
             "url": "https://github.com/tsoding/HyperNerd",
             "description": "Since the last Haskell stream was cancelled due to my Internet being down, let's make another one instead of day off.",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-06-24",
@@ -278,7 +278,7 @@
             "title": "Recording YouTube video (Haskell)",
             "url": "https://youtub.com/tsoding",
             "description": "Recording next YouTube video.",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-09-23",
@@ -286,7 +286,7 @@
             "title": "Nothing (Game in Pure C)",
             "url": "https://github.com/tsoding/nothing",
             "description": "A simple platformer about nothing. No Engines, no OpenGL, no Box2D. Only C and SDL2",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-10-07",
@@ -294,7 +294,7 @@
             "title": "Last GRUB 2 stream",
             "url": "https://www.gnu.org/software/grub/grub-download.html",
             "description": "It was a fun project, but it's time to wrap it up...",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-11-04",
@@ -302,7 +302,7 @@
             "title": "JSON Parser in 100 Lines from scratch in Haskell",
             "url": "https://tsoding.org/schedule",
             "description": "",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "date": "2019-12-23",
@@ -310,7 +310,7 @@
             "title": "Stream from Debianus",
             "url": "https://twitch.tv/tsoding",
             "description": "I finally set up Debian on my second laptop to the point where I think it might be streamable. Testing it out. Gonna do some random Farting Around™.",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "title": "Web Application in C",
@@ -318,7 +318,7 @@
             "description": "Simple Event Schedule Web Application in C. This project has two goals:\n1. Implement backgend for https://github.com/tsoding/schedule\n2. Implement enough Web related code to later extract it as an epic Web Framework in C",
             "time": "23:00",
             "date": "2019-12-30",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "title": "Some Quick YouTube stuff recording",
@@ -326,7 +326,7 @@
             "description": "Nothing much to say. We gonna record some stuff for YouTube.",
             "time": "23:00",
             "date": "2020-01-20",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "title": "Vodus — Twitch Chat Renderer",
@@ -334,7 +334,7 @@
             "description": "I got bored and decided to stream whatever.",
             "time": "23:00",
             "date": "2020-01-27",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "title": "Lazy Evalution using TypeScript",
@@ -342,7 +342,7 @@
             "description": "In today's lecture we gonna take a look into [Lazy Evalution](https://en.wikipedia.org/wiki/Lazy_evaluation) using [TypeScript](https://www.typescriptlang.org/) for all of the examples.",
             "time": "23:00",
             "date": "2020-02-03",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "title": "Extra Something Stream",
@@ -350,7 +350,7 @@
             "description": "I kinda wanna keep developing that [thing](https://github.com/tsoding/something) while I have motivation to do so. Let's do another GameDev stream today, okay?\n\nP.S. I'm super duper sorry if I ruined your today's plans with this stream!",
             "time": "23:00",
             "date": "2020-02-24",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         {
             "title": "Random One-Off Stream",
@@ -358,7 +358,7 @@
             "description": "Just a random one-off stream on a random topic.",
             "time": "23:00",
             "date": "2020-03-30",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         }
     ],
     "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000, 1577808000, 1579017600, 1579104000, 1579190400, 1579276800, 1586361600, 1587139200, 1590854400, 1590940800, 1591891200, 1592582400, 1594483200, 1594569600, 1597140000, 1597485600, 1597572000, 1597744800, 1597831200, 1597917600, 1599904800, 1600509600, 1602669600, 1602756000],
@@ -429,13 +429,13 @@
             "title": "YouTube Content",
             "url": "https://www.youtube.com/tsoding",
             "description": "Recording some videos for my <a href='https://www.youtube.com/tsoding'>YouTube Channel</a>: <ul><li>April Fools Video</li><li>Next HaskellRank episode with CodeWars</li></ul>",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         "1553270400": {
             "title": "Smart Stream",
             "url": "https://www.twitch.tv/tsoding",
             "description": "<p>On Smart Stream we watch educational videos trying to get smart.</p>",
-            "channel": "https://twitch.tv/tsoding"
+            "channel": "tsoding"
         },
         "1555430400": {
             "title": "Teeworlds Gamepad + MyPaint Selection Tool (Real Open Source Contribution)",
