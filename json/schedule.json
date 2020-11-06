@@ -531,6 +531,16 @@
             "title": "WCC (Low level language that compiles directly to WebAssembly)",
             "url": "https://github.com/tsoding/wcc",
             "description": "Low level language that compiles directly to WebAssembly. The goal of the project is to be as close to WebAssembly as possible yet providing nice abstraction mechanisms to speed up the development process. The target audience of the language is people who do [raw WebAssembly](https://surma.dev/things/raw-wasm/) development for recreational purposes."
+        },
+        "1604743200": {
+            "title": "Genetic Programming — Part 2",
+            "url": "https://github.com/tsoding/gp",
+            "description": "Continuation of the topic we started on the yesterday's one-off stream."
+        },
+        "1604916000": {
+            "title": "Something (Game in C++)",
+            "description": "[Nothing is put on hiatus for now](https://gist.github.com/rexim/9a66d86860681b1b34f414572fddf4ff)\n\nThis is the next gamedev project with the goal to actually ship something. It's gonna be a platformer as well. You can pew pew pew and place destroyable blocks for protection from AI-driven enemies.",
+            "url": "https://github.com/tsoding/something"
         }
     }
 }
