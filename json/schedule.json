@@ -220,6 +220,16 @@
             "days": [1],
             "time": "17:00",
             "starts": "2020-10-12",
+            "ends": "2020-12-11",
+            "channel": "tsoding"
+        },
+        {
+            "name": "Lisp Interpreter in C",
+            "url": "https://github.com/tsoding/ebisp",
+            "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
+            "days": [1],
+            "time": "17:00",
+            "starts": "2020-12-12",
             "channel": "tsoding"
         }
     ],
