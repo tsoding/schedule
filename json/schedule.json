@@ -561,6 +561,11 @@
             "title": "Something (Game in C++)",
             "description": "[Nothing is put on hiatus for now](https://gist.github.com/rexim/9a66d86860681b1b34f414572fddf4ff)\n\nThis is the next gamedev project with the goal to actually ship something. It's gonna be a platformer as well. You can pew pew pew and place destroyable blocks for protection from AI-driven enemies.",
             "url": "https://github.com/tsoding/something"
+        },
+        "1609236000": {
+            "title": "Lisp Interpreter in C",
+            "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
+            "url": "https://github.com/tsoding/ebisp"
         }
     }
 }
