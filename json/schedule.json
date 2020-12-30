@@ -566,6 +566,11 @@
             "title": "Lisp Interpreter in C",
             "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
             "url": "https://github.com/tsoding/ebisp"
+        },
+        "1609322400": {
+            "title": "Lisp Interpreter in C",
+            "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
+            "url": "https://github.com/tsoding/ebisp"
         }
     }
 }
