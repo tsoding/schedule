@@ -231,6 +231,15 @@
             "time": "17:00",
             "starts": "2020-12-12",
             "channel": "tsoding"
+        },
+        {
+            "name": "Advent of Code 2019 in Haskell",
+            "url": "https://adventofcode.com/2019",
+            "description": "Solving the entirety of Advent of Code 2019 in Haskell. No other language is allowed no matter how much stateful code the problem requires",
+            "days": [4],
+            "time": "17:00",
+            "starts": "2020-12-31",
+            "channel": "tsoding"
         }
     ],
     "extraEvents": [
