@@ -580,6 +580,11 @@
             "title": "Lisp Interpreter in C",
             "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
             "url": "https://github.com/tsoding/ebisp"
+        },
+        "1609581600": {
+            "title": "Bézier Curves in OpenGL Fragment Shaders",
+            "description": "Continuing yesterday's topic of Bézier Curves. This time trying to render them using only OpenGL Fragment Shaders.\n\n(GameDev in C++ afterwards if we have enough time)",
+            "url": "https://github.com/tsoding/bezier"
         }
     }
 }
