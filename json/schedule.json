@@ -154,6 +154,7 @@
             "days": [3],
             "time": "17:00",
             "starts": "2020-02-05",
+            "ends": "2021-01-05",
             "channel": "tsoding"
         },
         {
@@ -211,6 +212,7 @@
             "days": [2],
             "time": "17:00",
             "starts": "2020-04-28",
+            "ends": "2021-01-04",
             "channel": "tsoding"
         },
         {
@@ -227,7 +229,7 @@
             "name": "Lisp Interpreter in C",
             "url": "https://github.com/tsoding/ebisp",
             "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
-            "days": [1],
+            "days": [1,2,3],
             "time": "17:00",
             "starts": "2020-12-12",
             "channel": "tsoding"
@@ -380,7 +382,7 @@
             "channel": "tsoding"
         }
     ],
-    "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000, 1577808000, 1579017600, 1579104000, 1579190400, 1579276800, 1586361600, 1587139200, 1590854400, 1590940800, 1591891200, 1592582400, 1594483200, 1594569600, 1597140000, 1597485600, 1597572000, 1597744800, 1597831200, 1597917600, 1599904800, 1600509600, 1602669600, 1602756000, 1606557600],
+    "cancelledEvents": [1532534400, 1533225600, 1536163200, 1540396800, 1541260800, 1544025600, 1545235200, 1547568000, 1548774000, 1559232000, 1569081600, 1574784000, 1577808000, 1579017600, 1579104000, 1579190400, 1579276800, 1586361600, 1587139200, 1590854400, 1590940800, 1591891200, 1592582400, 1594483200, 1594569600, 1597140000, 1597485600, 1597572000, 1597744800, 1597831200, 1597917600, 1599904800, 1600509600, 1602669600, 1602756000, 1606557600, 1610013600],
     "timezone": "Asia/Novosibirsk",
     "eventPatches": {
         "1536163200": {
@@ -585,6 +587,11 @@
             "title": "Bézier Curves in OpenGL Fragment Shaders",
             "description": "Continuing yesterday's topic of Bézier Curves. This time trying to render them using only OpenGL Fragment Shaders.\n\n(GameDev in C++ afterwards if we have enough time)",
             "url": "https://github.com/tsoding/bezier"
+        },
+        "1610100000": {
+            "title": "Advent of Code 2019 in Haskell",
+            "description": "Solving the entirety of Advent of Code 2019 in Haskell. No other language is allowed no matter how much stateful code the problem requires",
+            "url": "https://adventofcode.com/2019"
         }
     }
 }
