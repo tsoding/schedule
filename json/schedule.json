@@ -592,6 +592,11 @@
             "title": "Advent of Code 2019 in Haskell",
             "description": "Solving the entirety of Advent of Code 2019 in Haskell. No other language is allowed no matter how much stateful code the problem requires",
             "url": "https://adventofcode.com/2019"
+        },
+        "1610186400": {
+            "title": "Webdev in Ada",
+            "description": "Today we gonna take a look at [Ada Web Server](https://github.com/AdaCore/aws) framework and see what it's capable of.",
+            "url": "https://twitch.tv/tsoding"
         }
     }
 }
