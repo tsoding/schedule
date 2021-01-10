@@ -597,6 +597,11 @@
             "title": "Webdev in Ada",
             "description": "Today we gonna take a look at [Ada Web Server](https://github.com/AdaCore/aws) framework and see what it's capable of.",
             "url": "https://twitch.tv/tsoding"
+        },
+        "1610272800": {
+            "title": "Programming in Ada",
+            "description": "Continue to learn more about [Ada Programming Language](https://en.wikipedia.org/wiki/Ada_(programming_language)).\n\nThe plan for today:\n- setup [ada-mode](https://elpa.gnu.org/packages/ada-mode.html) for Emacs\n- learn how to use TLS sockets in Ada.\n- see how to add TLS connection support to [ada-irc](https://github.com/erik/ada-irc) or maybe even start developing a custom IRC library",
+            "url": "https://github.com/tsoding/ada-probe"
         }
     }
 }
