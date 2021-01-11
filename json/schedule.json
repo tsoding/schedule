@@ -226,9 +226,9 @@
             "channel": "tsoding"
         },
         {
-            "name": "Lisp Interpreter in C",
-            "url": "https://github.com/tsoding/ebisp",
-            "description": "Embedded Lisp as a static library that could be used as a scripting language for applications.",
+            "name": "Virtual Machine in C",
+            "url": "https://github.com/tsoding/bm",
+            "description": "Simple Virtual Machine with its own Bytecode and Assembly language.",
             "days": [1,2,3],
             "time": "17:00",
             "starts": "2020-12-12",
