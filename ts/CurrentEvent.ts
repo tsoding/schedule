@@ -5,6 +5,7 @@ import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
 import TwitchPlayer from './TwitchPlayer';
+import Timestamp from './Timestamp'
 
 export default class CurrentEvent implements UiComponent {
     constructor(private _event: dto.Event) {
@@ -13,13 +14,7 @@ export default class CurrentEvent implements UiComponent {
     appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new ComponentsArray([
-                new html.Div(
-                    new html.Href(
-                        `#_${this._event.datetime.utc().unix()}`,
-                        new html.Text(`${this._event.datetime.utc().unix()}`)
-                    ),
-                    {"class": "timestamp"}
-                ),
+                new Timestamp(this._event.timestamp()),
                 new html.Div(
                     new html.Href(
                         `https://twitch.tv/${this._event.channel ? this._event.channel : "tsoding"}`,

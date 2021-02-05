@@ -4,6 +4,7 @@ import * as moment from 'moment';
 import ComponentsArray from './ComponentsArray';
 import Countdown from './Countdown';
 import UiComponent from './UiComponent';
+import Timestamp from './Timestamp';
 
 export default class PastEvent implements UiComponent {
     constructor(private _event: dto.Event) {
@@ -12,13 +13,7 @@ export default class PastEvent implements UiComponent {
     appendTo(entry: HTMLElement | null): void {
         new html.Div(
             new ComponentsArray([
-                new html.Div(
-                    new html.Href(
-                        `#_${this._event.datetime.utc().unix()}`,
-                        new html.Text(`${this._event.datetime.utc().unix()}`)
-                    ),
-                    {"class": "timestamp"}
-                ),
+                new Timestamp(this._event.timestamp()),
                 new html.H1(
                     new html.Href(
                         `${this._event.url}`,

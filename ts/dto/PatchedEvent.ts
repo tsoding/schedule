@@ -2,19 +2,9 @@ import * as moment from 'moment';
 import Event from './Event';
 import EventPatch from './EventPatch';
 
-export default class PatchedEvent implements Event {
-    datetime: moment.Moment;
-    title: string;
-    description: string;
-    url: string;
-    channel: string;
-
+export default class PatchedEvent extends Event {
     constructor(event: Event, eventPatch: EventPatch | undefined) {
-        this.datetime = event.datetime;
-        this.title = event.title;
-        this.description = event.description;
-        this.url = event.url;
-        this.channel = event.channel;
+        super(event.datetime, event.title, event.description, event.url, event.channel);
 
         if (eventPatch) {
             if (eventPatch.title) {

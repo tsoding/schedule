@@ -13,7 +13,7 @@ export default class Event implements UiComponent {
     }
 
     appendTo(entry: HTMLElement | null): void {
-        let secondsDiff = moment().diff(this._event.datetime, 'seconds');
+        const secondsDiff = moment().diff(this._event.datetime, 'seconds');
 
         if (this.isCancelled()) {
             new CancelledEvent(this._event).appendTo(entry);
@@ -25,7 +25,8 @@ export default class Event implements UiComponent {
             new FutureEvent(this._event).appendTo(entry);
         }
 
-        const hashId = "#_" + this._event.datetime.utc().unix();
+        const hashId = "#_" + this._event.timestamp();
+
         if (window.location.hash == hashId) {
             window.location.hash = "";
             setTimeout(() => { window.location.hash = hashId; }, 0);
